@@ -1,0 +1,791 @@
+[
+  {
+    "id": "air-panel-aus",
+    "title": "Premiere & Panel (AU.S)",
+    "date": "2026",
+    "client": "AU Studio",
+    "categories": [
+      "brand",
+      "flyer",
+      "production",
+      "event"
+    ],
+    "images": [],
+    "body": "In-progress. Producing premiere and panel for an AIR x AU Studio event."
+  },
+  {
+    "id": "archival-music-videos",
+    "title": "Archival Music Videos",
+    "date": "2019",
+    "client": "Ian Ross Cohen",
+    "categories": [
+      "artist",
+      "video",
+      "research",
+      "curation"
+    ],
+    "images": [
+      "images/archival-music-videos/water.png",
+      "images/archival-music-videos/dontwasteitbro.png",
+      "images/archival-music-videos/jeremyhillaryphd.png"
+    ],
+    "body": "A series of music videos developed for musician Ian Ross Cohen. Leveraging archival footage scraped from Prelinger Archive.\n\n<figure>\n  <img src=\"images/archival-music-videos/water.png\">\n  <figcaption>1. [Water](https://vimeo.com/260165960?fl=pl&fe=sh)</figcaption>\n</figure>\n\n<figure>\n  <img src=\"images/archival-music-videos/dontwasteitbro.png\">\n  <figcaption>2. [Don't Waste It Bro](https://vimeo.com/267480045?fl=pl&fe=sh)</figcaption>\n</figure>\n\n<figure>\n  <img src=\"images/archival-music-videos/jeremyhillaryphd.png\">\n  <figcaption>3. [Jeremy Hillary P.H.D](https://vimeo.com/264090111?fl=pl&fe=sh)</figcaption>\n</figure>"
+  },
+  {
+    "id": "augie-gallery",
+    "title": "Austin Augie Gallery",
+    "date": "2026",
+    "client": "Austin Augie",
+    "categories": [
+      "artist",
+      "curation",
+      "archive"
+    ],
+    "images": [],
+    "body": "In-progress."
+  },
+  {
+    "id": "aus-archive",
+    "title": "AU Studio Archive",
+    "date": "2025",
+    "client": "AU Studio",
+    "categories": [
+      "archive"
+    ],
+    "images": [],
+    "body": "Organized imagery from various sources into a cloud archive for simple curation and exploration."
+  },
+  {
+    "id": "aus-rebrand",
+    "title": "AU Studio Rebrand",
+    "date": "2025",
+    "client": "AU Studio",
+    "categories": [
+      "web",
+      "artist",
+      "brand",
+      "archive",
+      "creative direction"
+    ],
+    "images": [
+      "images/aus-rebrand/image1.jpg",
+      "images/aus-rebrand/image2.jpg",
+      "images/aus-rebrand/image3.jpg"
+    ],
+    "body": "In the summer of 2025, following a rebrand from Studio Augie to AU Studio, we commissioned designer Sebastian Hunger-Bühler to develop new branding and a subsequent website redesign. Pulling inspiration from various sources, we landed on the concept of zoetropes with hand-drawn illustration. The brand assets consisted of logos, wordmarks, and animated gifs.\n\n<figure>\n  <img src=\"images/aus-rebrand/image1.jpg\">\n  <figcaption>1.</figcaption>\n</figure>\n\nWe then got to work re-engineering the studio website, with a focus on displaying the wide range of styles and projects the studio executed upon. Following a series of intimate discussions, we landed on a splash page plus index format, allowing us to show work in both an overview and detailed perspective. Rather than present video in its heavy and unoptimized format, we chose to display the work through a series of gifs; breathing life into the site.\n\n<figure>\n  <img src=\"images/aus-rebrand/image2.jpg\">\n  <figcaption>2.</figcaption>\n</figure>\n\nWhat followed was an ever-evolving portfolio, gallery, and index. A site that allowed for growth without the pitfalls of confusion.\n\n<figure>\n  <img src=\"images/aus-rebrand/image3.jpg\">\n  <figcaption>3.</figcaption>\n</figure>"
+  },
+  {
+    "id": "aus-social",
+    "title": "AU Studio Social",
+    "date": "2025",
+    "client": "AU Studio",
+    "categories": [
+      "artist",
+      "brand",
+      "archive",
+      "creative direction"
+    ],
+    "images": [],
+    "body": "Social media curation and management for AU Studio."
+  },
+  {
+    "id": "blocks",
+    "title": "Blocks",
+    "date": "2021",
+    "client": "Personal",
+    "categories": [
+      "artist",
+      "experiment",
+      "curation",
+      "photography",
+      "thesis",
+      "code"
+    ],
+    "images": [
+      "images/blocks/blocks.png",
+      "images/blocks/blocks2.png",
+      "images/blocks/stormking.png"
+    ],
+    "body": "Blocks was a series developed during my thesis. Drawing upon my previous Windows work, I set out to capture an entire city block. What followed was three distinct explorations.\n\n<figure>\n  <img src=\"images/blocks/blocks.png\">\n  <figcaption>1. Accordion Block</figcaption>\n</figure>\n\nFirst, and to be honest most ‘low hanging fruit’, was the exploration of book form. I designed an accordion style book that allowed readers to unfold the city block, reinforcing its grandeur and the absurdity of its capture.\n\n<figure>\n  <img src=\"images/blocks/blocks2.png\">\n  <figcaption>2. Interaction Block</figcaption>\n</figure>\n\nSecond, an interaction exploration. Taking advantage of my coding knowledge, I superimposed two versions of ‘my block’ into a single experience. This allowed viewers to further investigate the piece, inviting them to peer deeper by revealing windows through hover interactions. If desired, viewers could take a screen grab and create their very own window images, thus referencing back to my original works.\n\n<figure>\n  <img src=\"images/blocks/stormking.png\">\n  <figcaption>3. Proposal of Space</figcaption>\n</figure>\n\nThird, was a series of ‘Proposals of Space’. Leveraging an empty lot within my captured city block, I layered images from my personal photographic archive to explore possibilities within the ‘empty’ space. This became an exploration into the affordances granted to designers, while creating social commentary through selection of different landscapes and buildings."
+  },
+  {
+    "id": "bodega-ink",
+    "title": "Bodega Ink Social",
+    "date": "2021",
+    "client": "Bodega Ink",
+    "categories": [
+      "social"
+    ],
+    "images": [
+      "images/bodega-ink/social.jpg"
+    ],
+    "body": "Social assets developed for East Village print shop, Bodega Ink.\n\n<figure>\n  <img src=\"images/bodega-ink/social.jpg\">\n  <figcaption>1. Story campaign</figcaption>\n</figure>"
+  },
+  {
+    "id": "business-card",
+    "title": "Business Card",
+    "date": "2022",
+    "client": "Personal",
+    "categories": [
+      "brand",
+      "print"
+    ],
+    "images": [
+      "images/business-card/flat.png",
+      "images/business-card/mock.jpeg"
+    ],
+    "body": "Business card design with incorporated note taking structure. By including a form of calendar to the back of the design, cards can be handed out with more personalization as well as the ability to supply notes. The card becomes a living object, allowing the recipient to quickly remember the way in which they came into possession of said card. \n\n<figure>\n  <img src=\"images/business-card/flat.png\">\n  <figcaption>1. Flat view</figcaption>\n</figure>\n\n<figure>\n  <img src=\"images/business-card/mock.jpeg\">\n  <figcaption>2. Mock</figcaption>\n</figure>"
+  },
+  {
+    "id": "busstop-processing",
+    "title": "Processing a Bus Stop",
+    "date": "2022",
+    "client": "Personal",
+    "categories": [
+      "artist",
+      "experiment",
+      "photography",
+      "code"
+    ],
+    "images": [
+      "images/busstop-processing/image1.png",
+      "images/busstop-processing/image2.png",
+      "images/busstop-processing/image3.png"
+    ],
+    "body": "An exploration into the code based design program, Processing. I developed language to modify an image from my photographic archive (Extractions series), in both halftone and layer separation/distribution.\n\n<figure>\n  <img src=\"images/busstop-processing/image1.png\">\n  <figcaption>1. </figcaption>\n</figure>\n\n<figure>\n  <img src=\"images/busstop-processing/image2.png\">\n  <figcaption>2. </figcaption>\n</figure>\n\n<figure>\n  <img src=\"images/busstop-processing/image3.png\">\n  <figcaption>3. </figcaption>\n</figure>"
+  },
+  {
+    "id": "collection-website",
+    "title": "Collection Site",
+    "date": "2025",
+    "client": "Personal",
+    "categories": [
+      "web",
+      "archive",
+      "code"
+    ],
+    "images": [
+      "images/collection-website/collection.jpg"
+    ],
+    "body": "An experiment, early in my learnings of HTML, with the simple intent of displaying my photographic archive through text.\n\n<figure>\n  <img src=\"images/collection-website/collection.jpg\">\n  <figcaption>1. Website</figcaption>\n</figure>"
+  },
+  {
+    "id": "crypto-assemblage-book",
+    "title": "Crypto Assemblage Book",
+    "date": "2021",
+    "client": "Ori Carino",
+    "categories": [
+      "book",
+      "catalog",
+      "archive"
+    ],
+    "images": [
+      "images/crypto-assemblage-book/covers.jpg",
+      "images/crypto-assemblage-book/spread1.jpg",
+      "images/crypto-assemblage-book/spread2.jpg"
+    ],
+    "body": "This catalog serves as an archive for the first collection of ‘Crypto Assemblage’ Digital Sculptures. All 54 Sculptures from this first collection are included along with their title, description, full image, and detail shots. The book is set in a smaller digest format, to be followed by multiple subsequent editions and a final, larger format book containing all 540 Digital Sculptures.\n\n<figure>\n  <img src=\"images/crypto-assemblage-book/covers.jpg\">\n  <figcaption>1. Covers </figcaption>\n</figure>\n\n<figure>\n  <img src=\"images/crypto-assemblage-book/spread1.jpg\">\n  <figcaption>2. Open spread </figcaption>\n</figure>\n\n<figure>\n  <img src=\"images/crypto-assemblage-book/spread2.jpg\">\n  <figcaption>3. Detail pages </figcaption>\n</figure>"
+  },
+  {
+    "id": "crypto-assemblage",
+    "title": "Crypto Assemblage",
+    "date": "2022",
+    "client": "Ori Carino",
+    "categories": [
+      "web",
+      "artist",
+      "brand",
+      "archive",
+      "book",
+      "creative direction",
+      "flyer",
+      "pitch"
+    ],
+    "images": [
+      "images/crypto-assemblage/logo1.jpg",
+      "images/crypto-assemblage/onepage.jpg",
+      "images/crypto-assemblage/site.jpg",
+      "images/crypto-assemblage-book/covers.jpg",
+      "images/crypto-assemblage/site2.jpg"
+    ],
+    "body": "Crypto Assemblage is a multi-media art project devised by Ori Carino. A series of NFTs navigating a new landscape, the work presented opportunities for innovation across both the art itself and its subsequent marketing.\n\n\n<figure>\n  <img src=\"images/crypto-assemblage/logo1.jpg\">\n  <figcaption>1. Logo (color)</figcaption>\n</figure>\n\nI developed a number of assets to accompany the work; ranging from pitch decks to websites to flyers and books. Developing branding from a series of artworks allowed me to contribute across a number of mediums to various audiences.\n\n<figure>\n  <img src=\"images/crypto-assemblage/onepage.jpg\">\n  <figcaption>2. One page</figcaption>\n</figure>\n\n<figure>\n  <img src=\"images/crypto-assemblage/makers.jpg\">\n  <figcaption>3. Makers Place branding</figcaption>\n</figure>\n\n\n<figure>\n  <img src=\"images/crypto-assemblage/site2.jpg\">\n  <figcaption>4. Site excerpt</figcaption>\n</figure>\n\n<figure>\n  <img src=\"images/crypto-assemblage-book/covers.jpg\">\n  <figcaption>5. Book</figcaption>\n</figure>"
+  },
+  {
+    "id": "db-cooper",
+    "title": "Subject: D.B. Cooper",
+    "date": "2021",
+    "client": "Personal",
+    "categories": [
+      "book",
+      "research",
+      "curation",
+      "editorial"
+    ],
+    "images": [
+      "images/db-cooper/covers.jpg",
+      "images/db-cooper/spread1.jpg",
+      "images/db-cooper/spread2.jpg",
+      "images/db-cooper/spread3.jpg"
+    ],
+    "body": "Subject: D.B. Cooper is a visual exploration and independent investigation into America’s most elusive skyjacker. While decades of research have failed to yield a definitive identity, the sheer volume of disclosed government files and media coverage has created a labyrinth of information. This publication pieces together articles and unredacted documents sourced from _The Black Vault_ online archive.\n\n<figure>\n  <img src=\"images/db-cooper/covers.jpg\">\n  <figcaption>1. Covers</figcaption>\n</figure>\n\nDrawing inspiration from vintage newspapers and FBI dossiers, the design utilizes vibrant highlighting as a form of \"anti-redaction\"; a visual through-line that guides the reader through key discoveries and evidence. To contrast truth with speculation, articles later deemed fake or debunked are printed on stark black backgrounds, emphasizing the thin line between historical fact and true-crime fantasy.\n\n<figure>\n  <img src=\"images/db-cooper/spread1.jpg\">\n  <figcaption>2. Highlighting as a tool for clarity.</figcaption>\n</figure>\n\n<figure>\n  <img src=\"images/db-cooper/spread3.jpg\">\n  <figcaption>3. Interior Spread</figcaption>\n</figure>\n\n<figure>\n  <img src=\"images/db-cooper/spread2.jpg\">\n  <figcaption>4. Debunked articles cast on black.</figcaption>\n</figure>"
+  },
+  {
+    "id": "documentary-photo",
+    "title": "Documentary Photography",
+    "date": "",
+    "client": "Personal",
+    "categories": [
+      "artist",
+      "photography"
+    ],
+    "images": [],
+    "body": "On-going practice and development of archive. Street documentation."
+  },
+  {
+    "id": "dots",
+    "title": "Don of The Streets",
+    "date": "2025",
+    "client": "Austin Augie",
+    "categories": [
+      "flyer",
+      "brand",
+      "creative direction",
+      "event"
+    ],
+    "images": [
+      "images/dots/dots1.jpg",
+      "images/dots/dots2.jpg",
+      "images/dots/dots3.jpg"
+    ],
+    "body": "Promotion material for legendary, high-stakes street BMX jam, Don of the Streets (DOTS). Promoted underground event with a social rollout consisting of roughly 10 digital assets. An estimated 1,000 international riders mobilized to swarm NYC and take over the streets.\n\n<figure>\n  <img src=\"images/dots/dots1.jpg\">\n  <figcaption>1. Day of Schedule</figcaption>\n</figure>\n\n<figure>\n  <img src=\"images/dots/dots2.jpg\">\n  <figcaption>2. Side jam flyer</figcaption>\n</figure>\n\n<figure>\n  <img src=\"images/dots/dots3.jpg\">\n  <figcaption>3. Flyers</figcaption>\n</figure>"
+  },
+  {
+    "id": "experimental-16mm",
+    "title": "Experimental 16mm",
+    "date": "2020",
+    "client": "Personal",
+    "categories": [
+      "video",
+      "experiment"
+    ],
+    "images": [
+      "images/experimental-16mm/lens.png",
+      "images/experimental-16mm/smith9thst.png"
+    ],
+    "body": "Videos created during a course in ‘16mm Experimental Filmmaking’.\n\n<figure>\n  <img src=\"images/experimental-16mm/lens.png\">\n  <figcaption>1. [Lens](https://vimeo.com/374535646?fl=pl&fe=sh)</figcaption>\n</figure>\n\n<figure>\n  <img src=\"images/experimental-16mm/smith9thst.png\">\n  <figcaption>2. [Smith/9th Street](https://vimeo.com/656326733?fl=pl&fe=sh)</figcaption>\n</figure>"
+  },
+  {
+    "id": "extractions",
+    "title": "Extractions",
+    "date": "",
+    "client": "Personal",
+    "categories": [
+      "artist",
+      "experiment",
+      "photography"
+    ],
+    "images": [
+      "images/extractions/extract1.png",
+      "images/extractions/extract2.jpeg",
+      "images/extractions/extract3.png",
+      "images/extractions/extract4.jpeg"
+    ],
+    "body": "Extractions is a development of the Windows practice. Where Windows examined the city's architectural facades through a singular obsessive lens, Extractions turns inward; isolating objects from their environments entirely. By removing the background and flattening the subject, each image takes on the quality of a museum specimen or scientific illustration. The mundane rendered beautiful, the everyday made of potential.\n\n<figure>\n  <img src=\"images/extractions/extract1.png\">\n  <figcaption>1.</figcaption>\n</figure>\n\n<figure>\n  <img src=\"images/extractions/extract2.jpeg\">\n  <figcaption>2.</figcaption>\n</figure>\n\n<figure>\n  <img src=\"images/extractions/extract3.png\">\n  <figcaption>3.</figcaption>\n</figure>\n\n<figure>\n  <img src=\"images/extractions/extract4.jpeg\">\n  <figcaption>4.</figcaption>\n</figure>"
+  },
+  {
+    "id": "family-portraits-aus",
+    "title": "Family Portraits (AU.S)",
+    "date": "2024",
+    "client": "AU Studio",
+    "categories": [
+      "brand",
+      "production",
+      "event"
+    ],
+    "images": [
+      "images/family-portraits-aus/flyer.jpg",
+      "images/family-portraits-aus/header.png"
+    ],
+    "body": "Community give-back program; offering free family portraits and prints to our audience. Event production and flyer development.\n\n<figure>\n  <img src=\"images/family-portraits-aus/flyer.jpg\">\n  <figcaption>1. Flyer</figcaption>\n</figure>\n\n <figure>\n  <img src=\"images/family-portraits-aus/header.png\">\n  <figcaption>2. Header for Sign-Up</figcaption>\n</figure>"
+  },
+  {
+    "id": "flashfood-aus",
+    "title": "Flashfood (AU.S)",
+    "date": "2025",
+    "client": "AU Studio",
+    "categories": [
+      "brand",
+      "video",
+      "production"
+    ],
+    "images": [
+      "images/flashfood-aus/flashfood.gif"
+    ],
+    "body": "AU Studio was commissioned by Flashfood to develop and shoot a series of interviews with renowned chefs from leading NYC restaurants. A three-part series, we interviewed head chefs from HAGS (East Village), Theodora (Fort Greene) and Chez Ma Tante (Greenpoint). Credited as Producer.\n\n<figure>\n  <img src=\"images/flashfood-aus/flashfood.gif\">\n  <figcaption>1. Teaser</figcaption>\n</figure>\n\nTheodora: [https://app.air.inc/a/c813c9b2e](https://app.air.inc/a/c813c9b2e)  \nChez Ma Tante: [https://app.air.inc/a/c32e41686](https://app.air.inc/a/c32e41686)\nHAGS: [https://app.air.inc/a/c9a76cefe](https://app.air.inc/a/c9a76cefe)"
+  },
+  {
+    "id": "frame-of-sight",
+    "title": "Frame of Sight",
+    "date": "2021",
+    "client": "Personal",
+    "categories": [
+      "artist",
+      "book",
+      "curation",
+      "photography",
+      "thesis"
+    ],
+    "images": [
+      "images/frame-of-sight/covers.png",
+      "images/frame-of-sight/spread1.png",
+      "images/frame-of-sight/spread2.png"
+    ],
+    "body": "Frame of Sight is a book developed during my senior thesis at Parsons. Stemming from a photographic series researching New York City’s architectural landscape through the documentation of window forms. \n\n<figure>\n  <img src=\"images/frame-of-sight/covers.png\">\n  <figcaption>1. Covers</figcaption>\n</figure>\n\n<figure>\n  <img src=\"images/frame-of-sight/spread1.png\">\n  <figcaption>2. Open Spread</figcaption>\n</figure>\n\n<figure>\n  <img src=\"images/frame-of-sight/spread2.png\">\n  <figcaption>3. Open Spread</figcaption>\n</figure>"
+  },
+  {
+    "id": "frm",
+    "title": "F_RM",
+    "date": "2021",
+    "client": "Personal",
+    "categories": [
+      "artist",
+      "experiment",
+      "brand",
+      "curation",
+      "photography",
+      "thesis"
+    ],
+    "images": [
+      "images/frm/FRMcard.gif"
+    ],
+    "body": "F_RM was developed as a direct result of my thesis. Beginning as a photographic research experiment, I drew inspiration from the window shape to inform a brand identity and institution proposal. \n\nI proposed an institution split into three pillars, form, farm, and firm. Form represents solo ventures; individual artists, projects, and works. Farm, collaborative efforts; group shows and lectures. And Firm, the institution as a whole.\n\nF_RM is conceived as gallery, school, foundation, and institution; a structure broad enough to hold the full breadth of creative practice. Exhibitions, panels, lectures, residencies. A space built to support the work, the conversation around the work, and the people making it.\n\n<figure>\n  <img src=\"images/frm/FRMcard.gif\">\n  <figcaption>1. F_RM card</figcaption>\n</figure>"
+  },
+  {
+    "id": "furniture-book",
+    "title": "Generative Furniture",
+    "date": "2020",
+    "client": "Personal",
+    "categories": [
+      "web",
+      "book",
+      "research",
+      "code"
+    ],
+    "images": [
+      "images/furniture-book/covers.png",
+      "images/furniture-book/spread1.png",
+      "images/furniture-book/spread2.png",
+      "images/furniture-book/spread3.jpg",
+      "images/furniture-book/spread4.png"
+    ],
+    "body": "Scraped Flickr using the platform's image API for media tagged with the single keyword \"furniture\"; collecting not just the photographs but the rich metadata attached to them: usernames, timestamps, camera models, geolocation strings, and descriptions written in a dozen languages.\n\nThis project is an experiment in automated research, curation, and print-based layout. Everything from the layout engine to the covers was generated dynamically using JavaScript and Bindery.js, a browser-based book layout engine, utilizing little to no HTML. By letting the tool paginate and compose the material automatically, what began as a simple exercise in understanding a new program became a way to curate in tandem with the code itself. The result is a publication that exists somewhere between an intentional archive, a cultural catalog, and an attractive accident.\n\n<figure>\n  <img src=\"images/furniture-book/covers.png\">\n  <figcaption>1. Front and back covers compile names/authors and titles respectively.</figcaption>\n</figure>\n\nAn experiment in research and curation; exploring the vast array of Flickr images through the guidelines of a single keyword, \"furniture\". The images range from clear shots of chairs, sofas, tables to artistic interpretations of the word itself.\n\n<figure>\n  <img src=\"images/furniture-book/spread1.png\">\n  <figcaption>2. Metadata rendered as body copy alongside sourced Flickr imagery. Camera model, username, timestamp.</figcaption>\n</figure>\n\nAt times, the odd image will sneak through. A motorcycle classified and tagged as a storage bench, a screenshot from what I can only suppose is a video game. From witty titles, like \"Chairity\", referring to a series of stacked chairs... to an image of an empty chair from 2015 titled \"On Balkans, you can weight yourself on the street. Most often, this is the way to earn some extra money for people who retired and still want to stay useful\".\n\n<figure>\n  <img src=\"images/furniture-book/spread2.png\">\n  <figcaption>3. Chairity VI</figcaption>\n</figure>\n\n\n<figure>\n  <img src=\"images/furniture-book/spread4.png\">\n  <figcaption>4. My Nightstand Drawer.</figcaption>\n</figure>\n\n<figure>\n  <img src=\"images/furniture-book/spread3.jpg\">\n  <figcaption>5. Table For Two</figcaption>\n</figure>"
+  },
+  {
+    "id": "ghent",
+    "title": "Ghent",
+    "date": "2023",
+    "client": "Personal",
+    "categories": [
+      "flyer",
+      "archive"
+    ],
+    "images": [
+      "images/ghent/ghent.png",
+      "images/ghent/close1.png",
+      "images/ghent/close2.png",
+      "images/ghent/close3.png",
+      "images/ghent/close4.png"
+    ],
+    "body": "A flyer developed from my personal archive of imagery.\n\n<figure>\n  <img src=\"images/ghent/ghent.png\">\n  <figcaption>1.</figcaption>\n</figure>\n\n<figure>\n  <img src=\"images/ghent/close1.png\">\n  <figcaption>2.</figcaption>\n</figure>\n\n<figure>\n  <img src=\"images/ghent/close2.png\">\n  <figcaption>3.</figcaption>\n</figure>\n\n<figure>\n  <img src=\"images/ghent/close3.png\">\n  <figcaption>4.</figcaption>\n</figure>\n\n<figure>\n  <img src=\"images/ghent/close4.png\">\n  <figcaption>5.</figcaption>\n</figure>"
+  },
+  {
+    "id": "icebox",
+    "title": "Icebox (AI)",
+    "date": "2020",
+    "client": "Personal",
+    "categories": [
+      "research",
+      "curation"
+    ],
+    "images": [],
+    "body": "An exploration into early AI image generation models."
+  },
+  {
+    "id": "mongol-rally-aus",
+    "title": "Mongol Rally (AU.S)",
+    "date": "2026",
+    "client": "AU Studio",
+    "categories": [
+      "pitch",
+      "creative direction"
+    ],
+    "images": [],
+    "body": "Pitch decks, investor meetings, concept direction and development."
+  },
+  {
+    "id": "montell-billboards",
+    "title": "Montell Fish Billboards",
+    "date": "2025",
+    "client": "Montell Fish",
+    "categories": [
+      "ooh",
+      "artist"
+    ],
+    "images": [
+      "images/montell-billboards/image1.jpeg",
+      "images/montell-billboards/image2.jpeg",
+      "images/montell-billboards/mock.jpg"
+    ],
+    "body": "Developed as part of Montell Fish’s marketing rollout for his sophomore album, Charlotte. Displayed around the world in a number of significant cities.\n\n<figure>\n  <img src=\"images/montell-billboards/image1.jpeg\">\n  <figcaption>1. Hollywood and Vine</figcaption>\n</figure>\n\n<figure>\n  <img src=\"images/montell-billboards/image2.jpeg\">\n  <figcaption>2. 282 Bowery</figcaption>\n</figure>\n\n<figure>\n  <img src=\"images/montell-billboards/mock.jpg\">\n  <figcaption>3. Mock</figcaption>\n</figure>"
+  },
+  {
+    "id": "montell-bts",
+    "title": "Montell Fish BTS",
+    "date": "2025",
+    "client": "Montell Fish",
+    "categories": [
+      "artist",
+      "photography"
+    ],
+    "images": [
+      "images/montell-bts/image1.jpg",
+      "images/montell-bts/image2.jpg",
+      "images/montell-bts/image3.jpg"
+    ],
+    "body": "Behind the scenes photography for Montell Fish during the rollout and creation of his sophomore album, Charlotte.\n\n<figure>\n  <img src=\"images/montell-bts/image1.jpg\">\n  <figcaption>1.</figcaption>\n</figure>\n\n<figure>\n  <img src=\"images/montell-bts/image2.jpg\">\n  <figcaption>2.</figcaption>\n</figure>\n\n<figure>\n  <img src=\"images/montell-bts/image3.jpg\">\n  <figcaption>3.</figcaption>\n</figure>"
+  },
+  {
+    "id": "montell-covers",
+    "title": "Montell Fish Covers",
+    "date": "2025",
+    "client": "Montell Fish",
+    "categories": [
+      "artist"
+    ],
+    "images": [
+      "images/montell-covers/thumbnails.jpg",
+      "images/montell-covers/color.jpg"
+    ],
+    "body": "A series of covers for Montell Fish. Image curation, resizes and color correction.\n\n<figure>\n  <img src=\"images/montell-covers/thumbnails.jpg\">\n  <figcaption>1. Single/Album covers</figcaption>\n</figure>\n\n<figure>\n  <img src=\"images/montell-covers/color.jpg\">\n  <figcaption>2. Color correction</figcaption>\n</figure>"
+  },
+  {
+    "id": "montell-teenage-engineering",
+    "title": "Teenage Engineering, Montell Fish",
+    "date": "2025",
+    "client": "Montell Fish",
+    "categories": [
+      "photography",
+      "artist"
+    ],
+    "images": [
+      "images/montell-teenage-engineering/excerpt.png"
+    ],
+    "body": "BTS from Montell Fish’s sophomore album, Charlotte. Featured on Teenage Engineering.\n\n<figure>\n  <img src=\"images/montell-teenage-engineering/excerpt.png\">\n  <figcaption>1. Excerpt from Teenage Engineering</figcaption>\n</figure>"
+  },
+  {
+    "id": "mouse",
+    "title": "möuse",
+    "date": "2022",
+    "client": "Personal",
+    "categories": [
+      "brand"
+    ],
+    "images": [
+      "images/mouse/mouse1.png"
+    ],
+    "body": "Preliminary Type Study\n\n<figure>\n  <img src=\"images/mouse/mouse1.png\">\n  <figcaption>1.</figcaption>\n</figure>\n\n<figure>\n  <img src=\"images/mouse/mouse2.png\">\n  <figcaption>2.</figcaption>\n</figure>\n\n<figure>\n  <img src=\"images/mouse/mouse3.png\">\n  <figcaption>3.</figcaption>\n</figure>"
+  },
+  {
+    "id": "newsletter-aus",
+    "title": "Newsletters (AU.S)",
+    "date": "2026",
+    "client": "AU Studio",
+    "categories": [
+      "brand",
+      "curation"
+    ],
+    "images": [],
+    "body": "Designed and shipped a series of newsletters to an amassed email list of 1,500+ individuals.\n\nDrawing inspiration from Japanese washi paper and AU Studio branding; I developed a structure enabling a series of monthly newsletters recapping work from the studio."
+  },
+  {
+    "id": "nypd-complaints",
+    "title": "NYPD Complaints",
+    "date": "2020",
+    "client": "Personal",
+    "categories": [
+      "web",
+      "research",
+      "experiment",
+      "code"
+    ],
+    "images": [
+      "images/nypd-complaints/realtime.png"
+    ],
+    "body": "Self-coded API exploration. Leveraging NYPD's public complaint API in combination with Google Maps’ street view API to contextualize incidents spatially.\n\n<figure>\n  <img src=\"images/nypd-complaints/realtime.png\">\n  <figcaption>1. NYPD Complaints</figcaption>\n</figure>"
+  },
+  {
+    "id": "olivetti",
+    "title": "Olivetti Book",
+    "date": "2020",
+    "client": "Personal",
+    "categories": [
+      "book",
+      "research",
+      "archive",
+      "editorial"
+    ],
+    "images": [
+      "images/olivetti/covers.jpg",
+      "images/olivetti/spread1.jpg",
+      "images/olivetti/spread2.jpg",
+      "images/olivetti/spread3.jpg",
+      "images/olivetti/spread4.png",
+      "images/olivetti/spread5.png",
+      "images/olivetti/spread6.png"
+    ],
+    "body": "This first issue in a series intended to explore the foundations and inner workings of heritage brands focuses on Olivetti, a renowned designer and manufacturer of typewriters and accounting machines. Olivetti was extremely successful throughout the 20th century and pioneered a variety of ideas, designs, and technologies. This collection of images and texts provides various points of view on the company whilst attempting to take the reader back in time. \n\n<figure>\n  <img src=\"images/olivetti/covers.jpg\">\n  <figcaption>1. Stack of books </figcaption>\n</figure>\n\nI dove into hundreds of archives, images, and essays to curate an overview of Olivetti and its lasting legacy on the design and typewriter landscape\n\n<figure>\n  <img src=\"images/olivetti/spread1.jpg\">\n  <figcaption>2. Open spread </figcaption>\n</figure>\n<figure>\n  <img src=\"images/olivetti/spread2.jpg\">\n  <figcaption>3. Image spread </figcaption>\n</figure>\n<figure>\n  <img src=\"images/olivetti/spread3.jpg\">\n  <figcaption>4. Open spread </figcaption>\n</figure>\n<figure>\n  <img src=\"images/olivetti/spread4.png\">\n  <figcaption>5. Image spread </figcaption>\n</figure>\n\n<figure>\n  <img src=\"images/olivetti/spread5.png\">\n  <figcaption>6. Open spread </figcaption>\n</figure>\n<figure>\n  <img src=\"images/olivetti/spread6.png\">\n  <figcaption>7. Image spread </figcaption>\n</figure>"
+  },
+  {
+    "id": "ori-social",
+    "title": "Ori Carino Social",
+    "date": "2021",
+    "client": "Ori Carino",
+    "categories": [
+      "artist",
+      "curation"
+    ],
+    "images": [
+      "images/ori-social/ori-social1.jpg"
+    ],
+    "body": "Social media curation and management for fine artist, Ori Carino.\n\n<figure>\n  <img src=\"images/ori-social/ori-social1.jpg\">\n  <figcaption>1. Social</figcaption>\n</figure>"
+  },
+  {
+    "id": "ori-springbreak",
+    "title": "Spring/Break Flyer",
+    "date": "2021",
+    "client": "Ori Carino",
+    "categories": [
+      "artist",
+      "flyer",
+      "photography",
+      "event"
+    ],
+    "images": [
+      "images/ori-springbreak/flyer.jpg"
+    ],
+    "body": "A flyer for Ori Carino’s sculpture exhibition in Spring/Break’s first sculpture show in Poughkeepsie, NY. Combination of photography and design.\n\n\n<figure>\n  <img src=\"images/ori-springbreak/flyer.jpg\">\n  <figcaption>1. 'Upstate Immersive Sculpture Project' flyer</figcaption>\n</figure>"
+  },
+  {
+    "id": "pitch-decks-aus",
+    "title": "Pitch Decks (AU.S)",
+    "date": "2024",
+    "client": "AU Studio",
+    "categories": [
+      "brand",
+      "pitch"
+    ],
+    "images": [],
+    "body": "A series of pitch decks for AU Studio's business development."
+  },
+  {
+    "id": "portfolios",
+    "title": "Portfolios",
+    "date": "",
+    "client": "Personal",
+    "categories": [
+      "web",
+      "experiment",
+      "brand",
+      "code"
+    ],
+    "images": [],
+    "body": "~~I've always remembered having a personal website. I remember, albeit vaguely, my brother leading me through the creation of my first site. The domain set-up, the tweaking of templates; the opening of a playground I'd explore for a long time to come.~~ Many of my portfolios and websites have come and gone, but my desire for experimentation and innovation has remained.\n\n<figure>\n  <img src=\"images/furniture-book/covers.png\">\n  <figcaption>1. My first 'design' portfolio. Mixing photography with my new found skills in raw HTML/CSS building.</figcaption>\n</figure>\n\nWhile I can recall a number of my early websites, only a few remain. Beginning with my 'car door' portfolio, developed early in my learnings of coding, my fresh perspective on the space birthed experimentation. \n\n<figure>\n  <img src=\"images/furniture-book/spread2.png\">\n  <figcaption>2. Bindery.js rendering a paginated spread. Lorem ipsum dolor sit amet, orci varius natoque.</figcaption>\n</figure>\n\nNow, many years later, my portfolio remains a continuously growing artifact. Years of rework and repositioning. Of time spent solving for various issues. A portfolio to a designer is like an outfit to a fashion baddie. \n\n<figure>\n  <img src=\"images/furniture-book/spread3.jpg\">\n  <figcaption>3. Metadata rendered as body copy alongside sourced Flickr imagery. Camera model, username, timestamp.</figcaption>\n</figure>"
+  },
+  {
+    "id": "printed-garage",
+    "title": "Printed Garage",
+    "date": "2022",
+    "client": "Personal",
+    "categories": [
+      "book",
+      "experiment"
+    ],
+    "images": [
+      "images/printed-garage/spread1.png",
+      "images/printed-garage/spread2.png"
+    ],
+    "body": "I've always loved cars. As a New Yorker though, the only way I can realistically have one, is through print. This work is a series of spread explorations for what I call, my Printed Garage.\n\n<figure>\n  <img src=\"images/printed-garage/spread1.png\">\n  <figcaption>1. Index spread</figcaption>\n</figure>\n\n<figure>\n  <img src=\"images/printed-garage/spread2.png\">\n  <figcaption>2. Interior spread</figcaption>\n</figure>"
+  },
+  {
+    "id": "roujee-tunes",
+    "title": "Roujee Tunes Flyer",
+    "date": "2024",
+    "client": "Roujee Tunes",
+    "categories": [
+      "flyer",
+      "artist",
+      "photography",
+      "event"
+    ],
+    "images": [
+      "images/roujee-tunes/poster.jpg"
+    ],
+    "body": "Flyer design for Miami based DJ Group, _Roujeee Tunes_ for a one night event in NYC\n\n<figure>\n  <img src=\"images/roujee-tunes/poster.jpg\">\n  <figcaption>1. September 17th, 2024 Flyer</figcaption>\n</figure>"
+  },
+  {
+    "id": "satellite-images",
+    "title": "Satellite Images",
+    "date": "2026",
+    "client": "Personal",
+    "categories": [
+      "artist",
+      "experiment",
+      "research",
+      "curation"
+    ],
+    "images": [
+      "images/satellite-images/Japan-Lighting.gif"
+    ],
+    "body": "Topographic experiment using Google Earth. Exploring changes in landscape and style of satellite imagery. \n\n<figure>\n  <img src=\"images/satellite-images/Japan-Lighting.gif\">\n  <figcaption>1. Satellite imagery .gif</figcaption>\n</figure>"
+  },
+  {
+    "id": "studio-augie-website",
+    "title": "Studio Augie Website",
+    "date": "2024",
+    "client": "AU Studio",
+    "categories": [
+      "web",
+      "artist",
+      "brand",
+      "archive"
+    ],
+    "images": [
+      "images/studio-augie-website/screen1.jpg",
+      "images/studio-augie-website/screen2.jpg",
+      "images/studio-augie-website/screen3.jpg"
+    ],
+    "body": "I met Austin Augie in January 2024; he was living with the Amish at the time, in a small town in Indiana. He was looking to build a studio of his own, and a website to go with it. Very quickly, what started as a website grew into the building of a brand. Through a series of conversations and in-depth discussions, the studio began to take shape. Still called Studio Augie at the time, it would target three specific pillars — fashion, weddings, and events — and leverage Augie’s archive of projects and images. Over the course of a few months, I dug through hard drives identifying selects and organizing.\n\n<figure>\n  <img src=\"images/studio-augie-website/screen1.jpg\">\n  <figcaption>1. Home</figcaption>\n</figure>\n\nBy establishing those three pillars, we were able to exhibit a vast array of images and videos in an exhibitory manner. A challenging project, it paved the way for many learnings and the beginning of a blossoming business.\n\n<figure>\n  <img src=\"images/studio-augie-website/screen2.jpg\">\n  <figcaption>2. Fashion pillar overview</figcaption>\n</figure>\n\n<figure>\n  <img src=\"images/studio-augie-website/screen3.jpg\">\n  <figcaption>3. Gallery view</figcaption>\n</figure>"
+  },
+  {
+    "id": "sweat-shopping",
+    "title": "Sweat Shopping",
+    "date": "2020",
+    "client": "Ori Carino",
+    "categories": [
+      "flyer",
+      "catalog",
+      "artist"
+    ],
+    "images": [
+      "images/sweat-shopping/pricesheet.jpg",
+      "images/sweat-shopping/flyer.png"
+    ],
+    "body": "I was commissioned to develop various marketing materials for a pop-up exhibition featuring three artists; Leah Tinari, Ori Carino and Robin Russell. I began by creating a double sided price sheet displaying the various pieces in the exhibition and their subsequent prices. These were handed out and picked up by viewers upon entering the space.\n\n<figure>\n  <img src=\"images/sweat-shopping/pricesheet.jpg\">\n  <figcaption>1. Price sheet</figcaption>\n</figure>\n\nI then created poster and flyer designs inspired by both the artists involved in the exhibition as well as the Lower East Side from which they gained inspiration.\n\n<figure>\n  <img src=\"images/sweat-shopping/flyer.png\">\n  <figcaption>2. Flyer Design</figcaption>\n</figure>"
+  },
+  {
+    "id": "toyo-tsuchiya-website",
+    "title": "Toyo Tsuchiya Website",
+    "date": "2021",
+    "client": "Toyo Tsuchiya Estate",
+    "categories": [
+      "web",
+      "artist",
+      "brand",
+      "archive"
+    ],
+    "images": [
+      "images/toyo-tsuchiya-website/mock1.png",
+      "images/toyo-tsuchiya-website/mock2.jpg"
+    ],
+    "body": "Toyo Tsuchiya was a prominent artist in the Lower East Side of Manhattan in the 1980s during a period of Anti-Art (Neoism). Co-creator of NO SE NO Social Club and the Rivington School, Toyo’s archive spans thousands of silver gelatin prints documenting the artist scene of the 1980s — as not only a photographer, but as an individual contributor. Developed from this work was a structure to be built upon through the construction of his archive.\n\nThe structure, contrary to a living artist’s portfolio, served to present the work as an overview, inviting curators and galleries to gaze upon the range of work.\n\nAn inspiring force. I was honored to be a part of this work.\n\n<figure>\n  <img src=\"images/toyo-tsuchiya-website/mock1.png\">\n  <figcaption>1. Desktop</figcaption>\n</figure>\n\n<figure>\n  <img src=\"images/toyo-tsuchiya-website/mock2.jpg\">\n  <figcaption>2. Mobile</figcaption>\n</figure>"
+  },
+  {
+    "id": "velectric",
+    "title": "Velectric Flyers",
+    "date": "2024",
+    "client": "Velectric",
+    "categories": [
+      "flyer",
+      "artist",
+      "photography",
+      "event"
+    ],
+    "images": [
+      "images/velectric/poster.jpg",
+      "images/velectric/poster2.jpg"
+    ],
+    "body": "A series of flyers for _Velectric_, a New York based DJ duo.\n\n<figure>\n  <img src=\"images/velectric/poster.jpg\">\n  <figcaption>1. August 24th, 2024 Flyer</figcaption>\n</figure>\n<figure>\n  <img src=\"images/velectric/poster2.jpg\">\n  <figcaption>2. August 21st, 2024 Flyer</figcaption>\n</figure>"
+  },
+  {
+    "id": "victorian-stories",
+    "title": "Victorian Short Stories Of",
+    "date": "2021",
+    "client": "Personal",
+    "categories": [
+      "book",
+      "research",
+      "curation",
+      "editorial"
+    ],
+    "images": [
+      "images/victorian-stories/covers.png",
+      "images/victorian-stories/spread1.png",
+      "images/victorian-stories/spread2.png",
+      "images/victorian-stories/spread3.png",
+      "images/victorian-stories/spread4.png"
+    ],
+    "body": "A curated publication of Victorian short stories exploring the dualities of romance and ruin. Two contrasting collections sourced from Project Gutenberg; _Victorian Short Stories of Successful Marriages_ and _Victorian Short Stories of Troubled Marriages_, bound into a single volume, the design physically manifesting the harmony and chaos of these relationships.\n\n<figure>\n  <img src=\"images/victorian-stories/covers.png\">\n  <figcaption>1. Covers</figcaption>\n</figure>\n\nThe covers establish this tension through deliberate subversion. The front cover, introducing the successful marriages section, depicts the Crystal Palace actively engulfed in flames. The back cover, introducing troubled marriages, shows the building pristine and intact. Destructive passion on one side, deceptive calm on the other.\n\n<figure>\n  <img src=\"images/victorian-stories/spread1.png\">\n  <figcaption>2. Successful Marriages – Table of Contents</figcaption>\n</figure>\n\n<figure>\n  <img src=\"images/victorian-stories/spread3.png\">\n  <figcaption>3. Troubled Marriages – Table of Contents</figcaption>\n</figure>\n\nRather than a single unified table of contents, each section opens with its own; reinforcing the idea that these are two distinct books sharing a binding. The typographic system mirrors this split throughout: the successful marriages half is set in black ink on white, clean and traditional, a deliberately ideal reading experience at odds with its burning cover.\n\n<figure>\n  <img src=\"images/victorian-stories/spread2.png\">\n  <figcaption>4. Successful Marriages Spread</figcaption>\n</figure>\n\n<figure>\n  <img src=\"images/victorian-stories/spread4.png\">\n  <figcaption>5. Troubled Marriages Spread</figcaption>\n</figure>\n\nThe moment the content shifts, the book inverts entirely; white text on black, plunging the reader into a darker space. Period paintings were selected for each chapter opening, matched thematically to the emotional register of the story that follows."
+  },
+  {
+    "id": "weddings-aus",
+    "title": "Weddings (AU.S)",
+    "date": "2024",
+    "client": "AU Studio",
+    "categories": [
+      "production",
+      "event"
+    ],
+    "images": [
+      "images/aus-weddings/wedding.gif"
+    ],
+    "body": "Production for a series of weddings with AU Studio.\n\n<figure>\n  <img src=\"images/aus-weddings/wedding.gif\">\n  <figcaption>1. France wedding</figcaption>\n</figure>"
+  },
+  {
+    "id": "wikibook",
+    "title": "Wikibook",
+    "date": "2019",
+    "client": "Personal",
+    "categories": [
+      "book",
+      "research",
+      "photography",
+      "editorial"
+    ],
+    "images": [
+      "images/wikibook/covers.jpg",
+      "images/wikibook/spread1.jpg",
+      "images/wikibook/spread2.jpg",
+      "images/wikibook/spread3.jpg",
+      "images/wikibook/spread4.jpg"
+    ],
+    "body": "\"Thirty Five mm Film and Minolta’s SRT-101 in the Lower East Side” is an editorial publication designed by combining a series of Wikipedia articles with my photography. The result was a story, or description, of: film photography, my camera, and Manhattan’s Lower East Side. \n\n<figure>\n  <img src=\"images/wikibook/covers.jpg\">\n  <figcaption>1. Covers and TOC </figcaption>\n</figure>\n\nMy TOC, made up by a combination of dots and breaks (loosely related to the amount of content in each section), is repeated on each chapter’s title page. The cover plays with the concept of hiding and revealing information, similar to what I was doing in my documentation of this particular neighborhood.\n\n<figure>\n  <img src=\"images/wikibook/spread1.jpg\">\n  <figcaption>2. Table of Contents </figcaption>\n</figure>\n\n<figure>\n  <img src=\"images/wikibook/spread2.jpg\">\n  <figcaption>3. Intro spread</figcaption>\n</figure>\n\n<figure>\n  <img src=\"images/wikibook/spread3.jpg\">\n  <figcaption>4. Chinatown chapter spread</figcaption>\n</figure>\n\n<figure>\n  <img src=\"images/wikibook/spread4.jpg\">\n  <figcaption>5. Chinatown body spread</figcaption>\n</figure>"
+  },
+  {
+    "id": "windows-photo",
+    "title": "Windows",
+    "date": "",
+    "client": "Personal",
+    "categories": [
+      "artist",
+      "experiment",
+      "photography"
+    ],
+    "images": [
+      "images/windows-photo/image1.jpg",
+      "images/windows-photo/image2.jpg",
+      "images/windows-photo/image3.jpg",
+      "images/windows-photo/image4.jpg"
+    ],
+    "body": "Windows is an ongoing photographic practice documenting the window forms of New York City's architectural facades. The window itself. Its shape, repetition, geometry. There is an absurdity to it: going out with a camera, flattening, curating, cataloguing. A body of work that became the foundation for a thesis, a brand, and several years of practice that followed.\n\n<figure>\n  <img src=\"images/windows-photo/image1.jpg\">\n  <figcaption>1.</figcaption>\n</figure>\n\n<figure>\n  <img src=\"images/windows-photo/image2.jpg\">\n  <figcaption>2.</figcaption>\n</figure>\n\n<figure>\n  <img src=\"images/windows-photo/image3.jpg\">\n  <figcaption>3.</figcaption>\n</figure>\n\n<figure>\n  <img src=\"images/windows-photo/image4.jpg\">\n  <figcaption>4.</figcaption>\n</figure>"
+  }
+]

@@ -4,9 +4,9 @@ date: 2021
 client: Personal
 categories: artist,book,curation,photography,thesis
 images:
-  - frame-of-sight/covers.png
-  - frame-of-sight/spread1.png
-  - frame-of-sight/spread2.png
+  - images/frame-of-sight/covers.png
+  - images/frame-of-sight/spread1.png
+  - images/frame-of-sight/spread2.png
 ---
 Frame of Sight is a book developed during my senior thesis at Parsons. Stemming from a photographic series researching New York City’s architectural landscape through the documentation of window forms. 
 

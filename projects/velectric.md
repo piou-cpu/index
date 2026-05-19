@@ -4,8 +4,8 @@ date: 2024
 client: Velectric
 categories: flyer,artist,photography,event
 images:
-  - velectric/poster.jpg
-  - velectric/poster2.jpg
+  - images/velectric/poster.jpg
+  - images/velectric/poster2.jpg
 ---
 
 A series of flyers for _Velectric_, a New York based DJ duo.

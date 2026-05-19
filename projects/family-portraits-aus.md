@@ -4,8 +4,8 @@ date: 2024
 client: AU Studio
 categories: brand,production,event
 images:
-  - family-portraits-aus/flyer.jpg
-  - family-portraits-aus/header.png
+  - images/family-portraits-aus/flyer.jpg
+  - images/family-portraits-aus/header.png
 ---
 Community give-back program; offering free family portraits and prints to our audience. Event production and flyer development.
 

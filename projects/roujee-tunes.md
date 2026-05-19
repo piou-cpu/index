@@ -4,7 +4,7 @@ date: 2024
 client: Roujee Tunes
 categories: flyer,artist,photography,event
 images:
-  - roujee-tunes/poster.jpg
+  - images/roujee-tunes/poster.jpg
 ---
 
 Flyer design for Miami based DJ Group, _Roujeee Tunes_ for a one night event in NYC

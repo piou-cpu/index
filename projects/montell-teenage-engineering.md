@@ -4,7 +4,7 @@ date: 2025
 client: Montell Fish
 categories: photography,artist
 images:
-  - montell-teenage-engineering/excerpt.png
+  - images/montell-teenage-engineering/excerpt.png
 ---
 BTS from Montell Fish’s sophomore album, Charlotte. Featured on Teenage Engineering.
 

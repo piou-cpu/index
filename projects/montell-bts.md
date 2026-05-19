@@ -4,9 +4,9 @@ date: 2025
 client: Montell Fish
 categories: artist,photography
 images:
-  - montell-bts/image1.jpg
-  - montell-bts/image2.jpg
-  - montell-bts/image3.jpg
+  - images/montell-bts/image1.jpg
+  - images/montell-bts/image2.jpg
+  - images/montell-bts/image3.jpg
 ---
 Behind the scenes photography for Montell Fish during the rollout and creation of his sophomore album, Charlotte.
 

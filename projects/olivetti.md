@@ -4,13 +4,13 @@ date: 2020
 client: Personal
 categories: book,research,archive,editorial
 images:
-  - olivetti/covers.jpg
-  - olivetti/spread1.jpg
-  - olivetti/spread2.jpg
-  - olivetti/spread3.jpg
-  - olivetti/spread4.png
-  - olivetti/spread5.png
-  - olivetti/spread6.png
+  - images/olivetti/covers.jpg
+  - images/olivetti/spread1.jpg
+  - images/olivetti/spread2.jpg
+  - images/olivetti/spread3.jpg
+  - images/olivetti/spread4.png
+  - images/olivetti/spread5.png
+  - images/olivetti/spread6.png
 ---
 
 This first issue in a series intended to explore the foundations and inner workings of heritage brands focuses on Olivetti, a renowned designer and manufacturer of typewriters and accounting machines. Olivetti was extremely successful throughout the 20th century and pioneered a variety of ideas, designs, and technologies. This collection of images and texts provides various points of view on the company whilst attempting to take the reader back in time. 

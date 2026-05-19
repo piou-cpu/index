@@ -4,9 +4,9 @@ date: 2025
 client: Montell Fish
 categories: ooh,artist
 images:
-  - montell-billboards/image1.jpeg
-  - montell-billboards/image2.jpeg
-  - montell-billboards/mock.jpg
+  - images/montell-billboards/image1.jpeg
+  - images/montell-billboards/image2.jpeg
+  - images/montell-billboards/mock.jpg
 ---
 Developed as part of Montell Fish’s marketing rollout for his sophomore album, Charlotte. Displayed around the world in a number of significant cities.
 

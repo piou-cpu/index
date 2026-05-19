@@ -4,9 +4,9 @@ date: 2025
 client: AU Studio
 categories: web,artist,brand,archive,creative direction
 images:
-  - aus-rebrand/image1.jpg
-  - aus-rebrand/image2.jpg
-  - aus-rebrand/image3.jpg
+  - images/aus-rebrand/image1.jpg
+  - images/aus-rebrand/image2.jpg
+  - images/aus-rebrand/image3.jpg
 ---
 In the summer of 2025, following a rebrand from Studio Augie to AU Studio, we commissioned designer Sebastian Hunger-Bühler to develop new branding and a subsequent website redesign. Pulling inspiration from various sources, we landed on the concept of zoetropes with hand-drawn illustration. The brand assets consisted of logos, wordmarks, and animated gifs.
 

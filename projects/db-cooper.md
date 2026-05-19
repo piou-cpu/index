@@ -4,10 +4,10 @@ date: 2021
 client: Personal
 categories: book,research,curation,editorial
 images:
-  - db-cooper/covers.jpg
-  - db-cooper/spread1.jpg
-  - db-cooper/spread2.jpg
-  - db-cooper/spread3.jpg
+  - images/db-cooper/covers.jpg
+  - images/db-cooper/spread1.jpg
+  - images/db-cooper/spread2.jpg
+  - images/db-cooper/spread3.jpg
 ---
 Subject: D.B. Cooper is a visual exploration and independent investigation into America’s most elusive skyjacker. While decades of research have failed to yield a definitive identity, the sheer volume of disclosed government files and media coverage has created a labyrinth of information. This publication pieces together articles and unredacted documents sourced from _The Black Vault_ online archive.
 

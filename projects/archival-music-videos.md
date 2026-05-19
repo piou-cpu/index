@@ -4,9 +4,9 @@ date: 2019
 client: Ian Ross Cohen
 categories: artist,video,research,curation
 images:
-  - archival-music-videos/water.png
-  - archival-music-videos/dontwasteitbro.png
-  - archival-music-videos/jeremyhillaryphd.png
+  - images/archival-music-videos/water.png
+  - images/archival-music-videos/dontwasteitbro.png
+  - images/archival-music-videos/jeremyhillaryphd.png
 ---
 A series of music videos developed for musician Ian Ross Cohen. Leveraging archival footage scraped from Prelinger Archive.
 

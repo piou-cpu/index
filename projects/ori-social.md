@@ -4,7 +4,7 @@ date: 2021
 client: Ori Carino
 categories: artist,curation
 images:
-  - ori-social/ori-social1.jpg
+  - images/ori-social/ori-social1.jpg
 ---
 Social media curation and management for fine artist, Ori Carino.
 

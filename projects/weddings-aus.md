@@ -4,7 +4,7 @@ date: 2024
 client: AU Studio
 categories: production,event
 images:
-  - aus-weddings/wedding.gif
+  - images/aus-weddings/wedding.gif
 ---
 Production for a series of weddings with AU Studio.
 

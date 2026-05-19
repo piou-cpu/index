@@ -4,11 +4,11 @@ date: 2020
 client: Personal
 categories: web,book,research,code
 images:
-  - furniture-book/covers.png
-  - furniture-book/spread1.png
-  - furniture-book/spread2.png
-  - furniture-book/spread3.jpg
-  - furniture-book/spread4.png
+  - images/furniture-book/covers.png
+  - images/furniture-book/spread1.png
+  - images/furniture-book/spread2.png
+  - images/furniture-book/spread3.jpg
+  - images/furniture-book/spread4.png
 ---
 
 Scraped Flickr using the platform's image API for media tagged with the single keyword "furniture"; collecting not just the photographs but the rich metadata attached to them: usernames, timestamps, camera models, geolocation strings, and descriptions written in a dozen languages.

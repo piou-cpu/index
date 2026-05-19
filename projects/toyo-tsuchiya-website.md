@@ -4,8 +4,8 @@ date: 2021
 client: Toyo Tsuchiya Estate
 categories: web,artist,brand,archive
 images:
-  - toyo-tsuchiya-website/mock1.png
-  - toyo-tsuchiya-website/mock2.jpg
+  - images/toyo-tsuchiya-website/mock1.png
+  - images/toyo-tsuchiya-website/mock2.jpg
 ---
 Toyo Tsuchiya was a prominent artist in the Lower East Side of Manhattan in the 1980s during a period of Anti-Art (Neoism). Co-creator of NO SE NO Social Club and the Rivington School, Toyo’s archive spans thousands of silver gelatin prints documenting the artist scene of the 1980s — as not only a photographer, but as an individual contributor. Developed from this work was a structure to be built upon through the construction of his archive.
 

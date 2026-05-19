@@ -4,7 +4,7 @@ date: 2021
 client: Bodega Ink
 categories: social
 images:
-  - bodega-ink/social.jpg
+  - images/bodega-ink/social.jpg
 ---
 Social assets developed for East Village print shop, Bodega Ink.
 

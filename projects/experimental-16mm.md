@@ -4,8 +4,8 @@ date: 2020
 client: Personal
 categories: video,experiment
 images:
-  - experimental-16mm/lens.png
-  - experimental-16mm/smith9thst.png
+  - images/experimental-16mm/lens.png
+  - images/experimental-16mm/smith9thst.png
 ---
 Videos created during a course in ‘16mm Experimental Filmmaking’.
 

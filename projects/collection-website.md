@@ -4,7 +4,7 @@ date: 2025
 client: Personal
 categories: web,archive,code
 images:
-  - collection-website/collection.jpg
+  - images/collection-website/collection.jpg
 ---
 An experiment, early in my learnings of HTML, with the simple intent of displaying my photographic archive through text.
 

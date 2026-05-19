@@ -4,11 +4,11 @@ date: 2021
 client: Personal
 categories: book,research,curation,editorial
 images:
-  - victorian-stories/covers.png
-  - victorian-stories/spread1.png
-  - victorian-stories/spread2.png
-  - victorian-stories/spread3.png
-  - victorian-stories/spread4.png
+  - images/victorian-stories/covers.png
+  - images/victorian-stories/spread1.png
+  - images/victorian-stories/spread2.png
+  - images/victorian-stories/spread3.png
+  - images/victorian-stories/spread4.png
 ---
 A curated publication of Victorian short stories exploring the dualities of romance and ruin. Two contrasting collections sourced from Project Gutenberg; _Victorian Short Stories of Successful Marriages_ and _Victorian Short Stories of Troubled Marriages_, bound into a single volume, the design physically manifesting the harmony and chaos of these relationships.
 

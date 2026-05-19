@@ -4,9 +4,9 @@ date: 2025
 client: Austin Augie
 categories: flyer,brand,creative direction,event
 images:
-  - dots/dots1.jpg
-  - dots/dots2.jpg
-  - dots/dots3.jpg
+  - images/dots/dots1.jpg
+  - images/dots/dots2.jpg
+  - images/dots/dots3.jpg
 ---
 Promotion material for legendary, high-stakes street BMX jam, Don of the Streets (DOTS). Promoted underground event with a social rollout consisting of roughly 10 digital assets. An estimated 1,000 international riders mobilized to swarm NYC and take over the streets.
 

@@ -4,8 +4,8 @@ date: 2025
 client: Montell Fish
 categories: artist
 images:
-  - montell-covers/thumbnails.jpg
-  - montell-covers/color.jpg
+  - images/montell-covers/thumbnails.jpg
+  - images/montell-covers/color.jpg
 ---
 A series of covers for Montell Fish. Image curation, resizes and color correction.
 

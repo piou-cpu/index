@@ -4,9 +4,9 @@ date: 2021
 client: Personal
 categories: artist,experiment,curation,photography,thesis,code
 images:
-  - blocks/blocks.png
-  - blocks/blocks2.png
-  - blocks/stormking.png
+  - images/blocks/blocks.png
+  - images/blocks/blocks2.png
+  - images/blocks/stormking.png
 ---
 Blocks was a series developed during my thesis. Drawing upon my previous Windows work, I set out to capture an entire city block. What followed was three distinct explorations.
 

@@ -4,7 +4,7 @@ date: 2022
 client: Personal
 categories: brand
 images:
-  - mouse/mouse1.png
+  - images/mouse/mouse1.png
 ---
 
 Preliminary Type Study

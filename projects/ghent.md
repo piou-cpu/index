@@ -4,11 +4,11 @@ date: 2023
 client: Personal
 categories: flyer,archive
 images:
-  - ghent/ghent.png
-  - ghent/close1.png
-  - ghent/close2.png
-  - ghent/close3.png
-  - ghent/close4.png
+  - images/ghent/ghent.png
+  - images/ghent/close1.png
+  - images/ghent/close2.png
+  - images/ghent/close3.png
+  - images/ghent/close4.png
 ---
 
 A flyer developed from my personal archive of imagery.

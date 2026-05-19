@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lou Hory</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #0e0e0e;
+    --surface: #161616;
+    --border: rgba(255,255,255,0.08);
+    --border-mid: rgba(255,255,255,0.15);
+    --text-primary: #e8e6e0;
+    --text-secondary: rgba(232,230,224,0.45);
+    --text-dim: rgba(232,230,224,0.22);
+    --accent: #e8e6e0;
+    --node-project: #e8e6e0;
+    --node-tag: transparent;
+    --link-color: rgba(255,255,255,0.12);
+    --window-bg: #f5f3ee;
+    --window-text: #1a1a1a;
+    --window-text-secondary: #666;
+    --window-border: #d0cec8;
+    --window-titlebar: #e8e6e0;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text-primary);
+    font-family: 'Georgia', serif;
+    height: 100vh;
+    overflow: hidden;
+    cursor: default;
+    user-select: none;
+  }
+
+  /* ── GRAPH ── */
+  #graph-view {
+    position: absolute;
+    inset: 0;
+    bottom: 40px;
+  }
+
+  #graph-view svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .link {
+    stroke: var(--link-color);
+    stroke-width: 0.5;
+    transition: opacity 0.4s ease;
+  }
+
+  .node-group {
+    cursor: pointer;
+    transition: opacity 0.4s ease;
+    pointer-events: all;
+  }
+
+  .node-project circle {
+    fill: var(--node-project);
+    stroke: none;
+    pointer-events: all;
+  }
+
+  .node-tag circle {
+    fill: rgba(255,255,255,0.01);
+    stroke: var(--node-project);
+    stroke-width: 1;
+    pointer-events: all;
+  }
+
+  .node-hit {
+    fill: transparent;
+    stroke: none;
+    pointer-events: all;
+    cursor: pointer;
+    opacity: 0;
+  }
+
+  .node-label {
+    fill: var(--text-secondary);
+    font-family: 'Courier New', monospace;
+    font-size: 10px;
+    pointer-events: none;
+    transition: fill 0.3s ease;
+  }
+
+  .node-group.faded { opacity: 0.08; }
+  .link.faded { opacity: 0.04; }
+
+  /* ── INDEX VIEW ── */
+  #index-view {
+    display: none;
+    position: absolute;
+    inset: 0;
+    bottom: 40px;
+    overflow-y: auto;
+    padding: 60px 80px 40px;
+  }
+
+  #index-view::-webkit-scrollbar { width: 0; }
+
+  .index-header {
+    font-family: 'Courier New', monospace;
+    font-size: 10px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 32px;
+    padding-bottom: 12px;
+    border-bottom: 0.5px solid var(--border);
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 20px;
+  }
+
+  .index-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 14px 0;
+    border-bottom: 0.5px solid var(--border);
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+
+  .index-row:hover { opacity: 0.6; }
+
+  .index-row .col-title {
+    font-family: 'Georgia', serif;
+    font-size: 13px;
+    color: var(--text-primary);
+  }
+
+  .index-row .col-meta {
+    font-family: 'Courier New', monospace;
+    font-size: 11px;
+    color: var(--text-secondary);
+  }
+
+  .index-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .index-tag {
+    font-family: 'Courier New', monospace;
+    font-size: 10px;
+    color: var(--text-dim);
+    border: 0.5px solid var(--border);
+    padding: 2px 6px;
+    border-radius: 2px;
+  }
+
+  /* ── FOOTER ── */
+  #footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 0.5px solid var(--border);
+    gap: 60px;
+  }
+
+  .footer-link {
+    font-family: 'Courier New', monospace;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.2s;
+    text-decoration: none;
+  }
+
+  .footer-link:hover { color: var(--text-primary); }
+
+  /* ── PROJECT WINDOWS ── */
+  #windows-layer {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 100;
+  }
+
+  .project-window {
+    position: absolute;
+    width: 375px;
+    height: 570px;
+    background: var(--window-bg);
+    border: 0.5px solid var(--window-border);
+    display: flex;
+    flex-direction: column;
+    pointer-events: all;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+  }
+
+  .window-titlebar {
+    background: var(--window-titlebar);
+    border-bottom: 0.5px solid var(--window-border);
+    height: 32px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    gap: 6px;
+    cursor: grab;
+    flex-shrink: 0;
+  }
+
+  .window-titlebar:active { cursor: grabbing; }
+
+  .win-btn {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+
+  .win-close { background: #ff5f57; }
+  .win-minimize { background: #febc2e; }
+  .win-maximize { background: #28c840; }
+
+  .window-title {
+    font-family: 'Courier New', monospace;
+    font-size: 10px;
+    color: #666;
+    flex: 1;
+    text-align: center;
+    letter-spacing: 0.05em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 33px;
+  }
+
+  .window-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 32px 28px 40px;
+    color: var(--window-text);
+  }
+
+  .window-body::-webkit-scrollbar { width: 0; }
+
+  .window-body h1 {
+    font-family: 'Georgia', serif;
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 6px;
+    color: var(--window-text);
+    line-height: 1.3;
+  }
+
+  .window-meta {
+    font-family: 'Courier New', monospace;
+    font-size: 10px;
+    color: var(--window-text-secondary);
+    margin-bottom: 28px;
+    display: flex;
+    gap: 16px;
+  }
+
+  .window-body p {
+    font-family: 'Georgia', serif;
+    font-size: 13px;
+    line-height: 1.75;
+    color: var(--window-text);
+    margin-bottom: 20px;
+  }
+
+  .window-body figure {
+    margin: 28px 0;
+  }
+
+  .window-body figure img {
+    width: 100%;
+    display: block;
+    background: #ddd;
+    min-height: 180px;
+  }
+
+  .window-body figcaption {
+    font-family: 'Courier New', monospace;
+    font-size: 10px;
+    color: var(--window-text-secondary);
+    margin-top: 8px;
+    padding-left: 16px;
+    line-height: 1.5;
+  }
+
+  .img-placeholder {
+    width: 100%;
+    background: #ddd;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Courier New', monospace;
+    font-size: 10px;
+    color: #999;
+  }
+
+  .window-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 24px;
+  }
+
+  .window-tag {
+    font-family: 'Courier New', monospace;
+    font-size: 9px;
+    color: #888;
+    border: 0.5px solid #ccc;
+    padding: 2px 7px;
+    border-radius: 2px;
+  }
+
+  /* ── TOOLTIP ── */
+  #tooltip {
+    position: fixed;
+    background: rgba(14,14,14,0.9);
+    color: var(--text-primary);
+    font-family: 'Courier New', monospace;
+    font-size: 10px;
+    padding: 6px 10px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.15s;
+    z-index: 200;
+    letter-spacing: 0.05em;
+    border: 0.5px solid var(--border-mid);
+  }
+</style>
+</head>
+<body>
+
+<div id="graph-view"><svg id="graph" style="pointer-events:all;"></svg></div>
+
+<div id="index-view">
+  <div class="index-header">
+    <span>Title</span>
+    <span>Client</span>
+    <span>Date</span>
+    <span>Tags</span>
+  </div>
+  <div id="index-rows"></div>
+</div>
+
+<div id="windows-layer"></div>
+<div id="tooltip"></div>
+
+<div id="footer">
+  <span class="footer-link" id="view-toggle">View</span>
+  <span class="footer-link" id="info-link">Info</span>
+</div>
+
+<script>
+const PROJECTS = [
+  {
+    id: 'generative-book',
+    title: 'Generative Book',
+    client: 'Personal',
+    date: '2020',
+    tags: ['generative', 'print', 'web', 'research'],
+    body: `
+      <p>Scraped Flickr for images tagged "furniture" — collecting not just the photographs but the metadata attached to them: usernames, timestamps, camera models, geolocation strings, descriptions written in a dozen languages. Fed everything into Bindery.js, a browser-based book layout engine, and let it paginate and compose the material automatically.</p>
+      <figure>
+        <div class="img-placeholder">spread-01.jpg</div>
+        <figcaption>1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et sapien vehicula varius.</figcaption>
+      </figure>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <figure>
+        <div class="img-placeholder">spread-02.jpg</div>
+        <figcaption>2. Bindery.js rendering a paginated spread. Lorem ipsum dolor sit amet, orci varius natoque.</figcaption>
+      </figure>
+      <p>Donec faucibus sem ac urna molestie, at tincidunt dolor mollis. Pellentesque quis orci maximus, volutpat est et, bibendum quam. Suspendisse semper quis ligula sed elementum.</p>
+      <figure>
+        <div class="img-placeholder">spread-03.jpg</div>
+        <figcaption>3. Metadata rendered as body copy alongside sourced imagery. Camera model, username, timestamp.</figcaption>
+      </figure>
+    `
+  },
+  {
+    id: 'mongol-rally',
+    title: 'Mongol Rally \'26',
+    client: 'AU Studios',
+    date: '2026',
+    tags: ['video', 'documentary', 'travel', 'photography'],
+    body: `
+      <p>10,000 miles. Prague to Far East Kazakhstan. A sub-$1,000 car, two people, and a full content series documenting the journey for AU Studios.</p>
+      <figure>
+        <div class="img-placeholder">mongol-01.jpg</div>
+        <figcaption>1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</figcaption>
+      </figure>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+    `
+  },
+  {
+    id: 'erratic',
+    title: 'Erratic',
+    client: 'Personal',
+    date: '2023',
+    tags: ['photography', 'archive', 'research'],
+    body: `
+      <p>An ongoing personal photography series centered on forested environments. Named after the geological term for a displaced boulder — rock carried by a glacier far from its origin and deposited in foreign terrain.</p>
+      <figure>
+        <div class="img-placeholder">erratic-01.jpg</div>
+        <figcaption>1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et sapien vehicula.</figcaption>
+      </figure>
+      <p>Pellentesque quis orci maximus, volutpat est et, bibendum quam. Suspendisse semper quis ligula sed elementum vestibulum ac condimentum mauris.</p>
+    `
+  },
+  {
+    id: 'capital-one-campaign',
+    title: 'Capital One Campaign',
+    client: 'Capital One / WCG',
+    date: '2024',
+    tags: ['design', 'client', 'brand'],
+    body: `
+      <p>Brand campaign work produced at West Cary Group for Capital One. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+      <figure>
+        <div class="img-placeholder">c1-01.jpg</div>
+        <figcaption>1. Lorem ipsum dolor sit amet.</figcaption>
+      </figure>
+      <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi sed feugiat mauris, ac semper est.</p>
+    `
+  },
+  {
+    id: 'whitewall-morocco',
+    title: 'Whitewall Morocco',
+    client: 'AU Studios',
+    date: '2024',
+    tags: ['video', 'travel', 'brand', 'photography'],
+    body: `
+      <p>Travel content series produced for Whitewall in Morocco. Run-and-gun production across multiple cities and landscapes. Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+      <figure>
+        <div class="img-placeholder">ww-01.jpg</div>
+        <figcaption>1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</figcaption>
+      </figure>
+    `
+  },
+  {
+    id: 'air-peru',
+    title: 'AIR — Peru',
+    client: 'AU Studios',
+    date: '2023',
+    tags: ['video', 'travel', 'documentary'],
+    body: `
+      <p>First installment of the AIR travel series. Documentary-style production across Peru. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+      <figure>
+        <div class="img-placeholder">peru-01.jpg</div>
+        <figcaption>1. Lorem ipsum dolor sit amet.</figcaption>
+      </figure>
+    `
+  },
+  {
+    id: 'website-designs',
+    title: 'Website Designs',
+    client: 'Various',
+    date: '2022',
+    tags: ['design', 'web', 'client'],
+    body: `
+      <p>A selection of website designs produced for various clients. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <figure>
+        <div class="img-placeholder">web-01.jpg</div>
+        <figcaption>1. Lorem ipsum dolor sit amet.</figcaption>
+      </figure>
+    `
+  },
+  {
+    id: 'objects',
+    title: 'Objects',
+    client: 'Personal',
+    date: '2024',
+    tags: ['photography', 'archive'],
+    body: `
+      <p>An ongoing archive of objects. Still photography, closely observed. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <figure>
+        <div class="img-placeholder">obj-01.jpg</div>
+        <figcaption>1. Lorem ipsum dolor sit amet, consectetur adipiscing.</figcaption>
+      </figure>
+    `
+  },
+];
+
+const INFO = {
+  id: 'info',
+  title: 'Info',
+  client: '',
+  date: '',
+  tags: [],
+  body: `
+    <p>Lou Hory. Senior Graphic Designer, co-founder of AU Studios. Based in New York.</p>
+    <p>Work spans graphic design, photography, film, and research. Available for select projects.</p>
+    <p style="font-family: 'Courier New', monospace; font-size: 11px; color: #888;">lou@example.com</p>
+  `
+};
+
+// ── BUILD GRAPH DATA ──
+const allTags = [...new Set(PROJECTS.flatMap(p => p.tags))];
+const nodes = [
+  ...allTags.map(t => ({ id: `tag:${t}`, label: t, type: 'tag' })),
+  ...PROJECTS.map(p => ({ id: p.id, label: p.title, type: 'project', data: p }))
+];
+
+const links = [];
+PROJECTS.forEach(p => {
+  p.tags.forEach(t => {
+    links.push({ source: `tag:${t}`, target: p.id });
+  });
+});
+
+// ── D3 GRAPH ──
+const svg = d3.select('#graph');
+let width = window.innerWidth;
+let height = window.innerHeight - 40;
+
+svg.attr('width', width).attr('height', height);
+
+window.addEventListener('resize', () => {
+  width = window.innerWidth;
+  height = window.innerHeight - 40;
+  svg.attr('width', width).attr('height', height);
+  simulation.force('center', d3.forceCenter(width / 2, height / 2));
+  simulation.alpha(0.3).restart();
+});
+
+const simulation = d3.forceSimulation(nodes)
+  .force('link', d3.forceLink(links).id(d => d.id).distance(90).strength(0.6))
+  .force('charge', d3.forceManyBody().strength(-180))
+  .force('center', d3.forceCenter(width / 2, height / 2))
+  .force('collision', d3.forceCollide(22));
+
+const linkSel = svg.append('g')
+  .selectAll('line')
+  .data(links)
+  .join('line')
+  .attr('class', 'link');
+
+const nodeSel = svg.append('g')
+  .selectAll('g')
+  .data(nodes)
+  .join('g')
+  .attr('class', d => `node-group node-${d.type}`)
+  .call(d3.drag()
+    .on('start', dragStart)
+    .on('drag', dragged)
+    .on('end', dragEnd));
+
+nodeSel.append('circle')
+  .attr('r', d => d.type === 'tag' ? 5 : 4);
+
+nodeSel.append('circle')
+  .attr('class', 'node-hit')
+  .attr('r', 10);
+
+nodeSel.append('text')
+  .attr('class', 'node-label')
+  .attr('dy', d => d.type === 'tag' ? -10 : -8)
+  .attr('text-anchor', 'middle')
+  .text(d => d.label);
+
+const tooltip = document.getElementById('tooltip');
+
+nodeSel.on('mousemove', (e, d) => {
+  tooltip.style.opacity = '1';
+  tooltip.style.left = (e.clientX + 12) + 'px';
+  tooltip.style.top = (e.clientY - 4) + 'px';
+  tooltip.textContent = d.type === 'tag' ? `#${d.label}` : d.label;
+}).on('mouseleave', () => {
+  tooltip.style.opacity = '0';
+});
+
+let didDrag = false;
+
+nodeSel.on('click', (e, d) => {
+  if (didDrag) return;
+  e.stopPropagation();
+  tooltip.style.opacity = '0';
+
+  if (d.type === 'project') {
+    openWindow(d.data);
+    return;
+  }
+
+  if (activeTag === d.id) {
+    activeTag = null;
+    nodeSel.classed('faded', false).classed('highlighted', false);
+    linkSel.classed('faded', false);
+    return;
+  }
+
+  activeTag = d.id;
+  const connectedIds = new Set();
+  connectedIds.add(d.id);
+  links.forEach(l => {
+    const src = typeof l.source === 'object' ? l.source.id : l.source;
+    const tgt = typeof l.target === 'object' ? l.target.id : l.target;
+    if (src === d.id) connectedIds.add(tgt);
+    if (tgt === d.id) connectedIds.add(src);
+  });
+
+  nodeSel
+    .classed('faded', n => !connectedIds.has(n.id))
+    .classed('highlighted', n => connectedIds.has(n.id));
+
+  linkSel.classed('faded', l => {
+    const src = typeof l.source === 'object' ? l.source.id : l.source;
+    const tgt = typeof l.target === 'object' ? l.target.id : l.target;
+    return src !== d.id && tgt !== d.id;
+  });
+});
+
+svg.on('click', () => {
+  activeTag = null;
+  nodeSel.classed('faded', false).classed('highlighted', false);
+  linkSel.classed('faded', false);
+});
+
+simulation.on('tick', () => {
+  linkSel
+    .attr('x1', d => d.source.x).attr('y1', d => d.source.y)
+    .attr('x2', d => d.target.x).attr('y2', d => d.target.y);
+  nodeSel.attr('transform', d => `translate(${d.x},${d.y})`);
+});
+
+let activeTag = null;
+
+function dragStart(e, d) {
+  didDrag = false;
+  if (!e.active) simulation.alphaTarget(0.3).restart();
+  d.fx = d.x; d.fy = d.y;
+}
+function dragged(e, d) {
+  didDrag = true;
+  d.fx = e.x; d.fy = e.y;
+}
+function dragEnd(e, d) {
+  if (!e.active) simulation.alphaTarget(0);
+  d.fx = null; d.fy = null;
+}
+
+// ── WINDOWS ──
+const windowsLayer = document.getElementById('windows-layer');
+let windowCount = 0;
+const openWindows = {};
+
+function openWindow(project) {
+  if (openWindows[project.id]) {
+    const w = openWindows[project.id];
+    w.style.zIndex = 100 + (++windowCount);
+    return;
+  }
+
+  const offset = (Object.keys(openWindows).length % 6) * 22;
+  const screenW = window.innerWidth;
+  const screenH = window.innerHeight;
+  const winW = 375, winH = 570;
+  const baseX = Math.round((screenW - winW) / 2) + offset - 60;
+  const baseY = Math.round((screenH - winH) / 2) + offset - 40;
+
+  const win = document.createElement('div');
+  win.className = 'project-window';
+  win.style.left = baseX + 'px';
+  win.style.top = baseY + 'px';
+  win.style.zIndex = 100 + (++windowCount);
+
+  const titlebar = document.createElement('div');
+  titlebar.className = 'window-titlebar';
+
+  const btnClose = document.createElement('button');
+  btnClose.className = 'win-btn win-close';
+  btnClose.title = 'Close';
+  btnClose.addEventListener('click', () => {
+    win.remove();
+    delete openWindows[project.id];
+  });
+
+  const btnMin = document.createElement('button');
+  btnMin.className = 'win-btn win-minimize';
+  btnMin.title = 'Minimize';
+
+  const btnMax = document.createElement('button');
+  btnMax.className = 'win-btn win-maximize';
+  btnMax.title = 'Maximize';
+
+  const titleEl = document.createElement('div');
+  titleEl.className = 'window-title';
+  titleEl.textContent = project.title;
+
+  titlebar.append(btnClose, btnMin, btnMax, titleEl);
+
+  const body = document.createElement('div');
+  body.className = 'window-body';
+  body.innerHTML = `
+    <h1>${project.title}</h1>
+    <div class="window-meta">
+      ${project.client ? `<span>${project.client}</span>` : ''}
+      ${project.date ? `<span>${project.date}</span>` : ''}
+    </div>
+    ${project.tags.length ? `<div class="window-tags">${project.tags.map(t => `<span class="window-tag">${t}</span>`).join('')}</div>` : ''}
+    ${project.body}
+  `;
+
+  win.append(titlebar, body);
+  windowsLayer.appendChild(win);
+  openWindows[project.id] = win;
+
+  // bring to front on click
+  win.addEventListener('mousedown', () => { win.style.zIndex = 100 + (++windowCount); });
+
+  // drag
+  makeDraggable(win, titlebar);
+}
+
+function makeDraggable(win, handle) {
+  let startX, startY, startLeft, startTop;
+  handle.addEventListener('mousedown', e => {
+    e.preventDefault();
+    startX = e.clientX;
+    startY = e.clientY;
+    startLeft = parseInt(win.style.left);
+    startTop = parseInt(win.style.top);
+    document.addEventListener('mousemove', onMove);
+    document.addEventListener('mouseup', onUp);
+  });
+  function onMove(e) {
+    win.style.left = (startLeft + e.clientX - startX) + 'px';
+    win.style.top = (startTop + e.clientY - startY) + 'px';
+  }
+  function onUp() {
+    document.removeEventListener('mousemove', onMove);
+    document.removeEventListener('mouseup', onUp);
+  }
+}
+
+// ── INDEX VIEW ──
+const indexRows = document.getElementById('index-rows');
+PROJECTS.forEach(p => {
+  const row = document.createElement('div');
+  row.className = 'index-row';
+  row.innerHTML = `
+    <span class="col-title">${p.title}</span>
+    <span class="col-meta">${p.client}</span>
+    <span class="col-meta">${p.date}</span>
+    <div class="index-tags">${p.tags.map(t => `<span class="index-tag">${t}</span>`).join('')}</div>
+  `;
+  row.addEventListener('click', () => openWindow(p));
+  indexRows.appendChild(row);
+});
+
+// ── FOOTER ──
+let isGraph = true;
+document.getElementById('view-toggle').addEventListener('click', () => {
+  isGraph = !isGraph;
+  document.getElementById('graph-view').style.display = isGraph ? 'block' : 'none';
+  document.getElementById('index-view').style.display = isGraph ? 'none' : 'block';
+});
+
+document.getElementById('info-link').addEventListener('click', () => openWindow(INFO));
+</script>
+</body>
+</html>

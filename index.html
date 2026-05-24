@@ -709,19 +709,19 @@ function buildGraph(projects) {
   const sim = d3.forceSimulation(nodes)
     .force('link', d3.forceLink(links)
       .id(d => d.id)
-      .distance(d => d.type === 'spine' ? 160 : 85)
-      .strength(d => d.type === 'spine' ? 1 : 0.5))
+      .distance(d => d.type === 'spine' ? 200 : 110)
+      .strength(d => d.type === 'spine' ? 0.8 : 0.3))
     .force('charge', d3.forceManyBody().strength(d => {
-      if (d.type === 'center') return -600;
-      if (d.type === 'anchor') return -400;
-      return -120;
+      if (d.type === 'center') return -800;
+      if (d.type === 'anchor') return -500;
+      return -200;
     }))
     .force('center', d3.forceCenter(W / 2, H / 2))
     .force('collision', d3.forceCollide(d => {
-      if (d.type === 'center') return 50;
-      if (d.type === 'anchor') return 40;
-      if (d.cover) return 36;
-      return 18;
+      if (d.type === 'center') return 20;
+      if (d.type === 'anchor') return 14;
+      if (d.cover) return 32;
+      return 8;
     }));
 
   // links
@@ -749,9 +749,9 @@ function buildGraph(projects) {
     const el = d3.select(this);
 
     if (d.type === 'center') {
-      el.append('circle').attr('r', 5).attr('fill', '#1A1A1A');
+      el.append('circle').attr('r', 4).attr('fill', '#1A1A1A');
       el.append('text')
-        .attr('dy', -10)
+        .attr('dy', -9)
         .attr('text-anchor', 'middle')
         .attr('font-family', 'Courier New')
         .attr('font-size', 11)
@@ -759,20 +759,18 @@ function buildGraph(projects) {
         .attr('letter-spacing', '0.04em')
         .text(d.label);
     } else if (d.type === 'anchor') {
-      el.append('circle').attr('r', 8).attr('fill', 'none').attr('stroke', '#555555').attr('stroke-width', 1.5);
+      el.append('circle').attr('r', 6).attr('fill', 'none').attr('stroke', '#777777').attr('stroke-width', 1);
       el.append('text')
-        .attr('dy', -14)
+        .attr('dy', -11)
         .attr('text-anchor', 'middle')
         .attr('font-family', 'Courier New')
         .attr('font-size', 10)
         .attr('fill', '#555555')
         .attr('letter-spacing', '0.06em')
         .text(d.label.toUpperCase());
-      // large invisible hit
-      el.append('circle').attr('class', 'node-hit').attr('r', 20);
+      el.append('circle').attr('class', 'node-hit').attr('r', 16).attr('fill', 'transparent').attr('stroke', 'none');
     } else if (d.cover) {
-      // image node — transparent PNG, no mask
-      const size = 52;
+      const size = 44;
       el.append('image')
         .attr('href', d.cover)
         .attr('x', -size / 2)
@@ -782,7 +780,7 @@ function buildGraph(projects) {
         .attr('preserveAspectRatio', 'xMidYMid meet')
         .style('pointer-events', 'none');
       el.append('text')
-        .attr('dy', size / 2 + 12)
+        .attr('dy', size / 2 + 11)
         .attr('text-anchor', 'middle')
         .attr('font-family', 'Courier New')
         .attr('font-size', 9)
@@ -794,18 +792,18 @@ function buildGraph(projects) {
         .attr('y', -size / 2)
         .attr('width', size)
         .attr('height', size)
-        .attr('fill', 'transparent');
+        .attr('fill', 'transparent')
+        .attr('stroke', 'none');
     } else {
-      // regular project node
-      el.append('circle').attr('r', 4).attr('fill', '#999999');
+      el.append('circle').attr('r', 3.5).attr('fill', '#AAAAAA');
       el.append('text')
-        .attr('dy', -8)
+        .attr('dy', -7)
         .attr('text-anchor', 'middle')
         .attr('font-family', 'Courier New')
         .attr('font-size', 9)
         .attr('fill', '#AAAAAA')
         .text(d.label);
-      el.append('circle').attr('class', 'node-hit').attr('r', 12);
+      el.append('circle').attr('class', 'node-hit').attr('r', 10).attr('fill', 'transparent').attr('stroke', 'none');
     }
   });
 

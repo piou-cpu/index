@@ -8,6 +8,7 @@ images:
   - images/db-cooper/spread1.jpg
   - images/db-cooper/spread2.jpg
   - images/db-cooper/spread3.jpg
+anchors: design, photography
 ---
 Subject: D.B. Cooper is a visual exploration and independent investigation into America’s most elusive skyjacker. While decades of research have failed to yield a definitive identity, the sheer volume of disclosed government files and media coverage has created a labyrinth of information. This publication pieces together articles and unredacted documents sourced from _The Black Vault_ online archive.
 

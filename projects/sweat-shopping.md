@@ -6,6 +6,7 @@ categories: flyer,catalog,artist
 images:
   - images/sweat-shopping/pricesheet.jpg
   - images/sweat-shopping/flyer.png
+anchors: design, direction
 ---
 
 I was commissioned to develop various marketing materials for a pop-up exhibition featuring three artists; Leah Tinari, Ori Carino and Robin Russell. I began by creating a double sided price sheet displaying the various pieces in the exhibition and their subsequent prices. These were handed out and picked up by viewers upon entering the space.

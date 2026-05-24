@@ -4,6 +4,7 @@ date: 2026
 client: AU Studio
 categories: brand,curation
 images:
+anchors: design, direction
 ---
 Designed and shipped a series of newsletters to an amassed email list of 1,500+ individuals.
 

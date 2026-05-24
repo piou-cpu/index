@@ -6,6 +6,7 @@ categories: video,experiment
 images:
   - images/experimental-16mm/lens.png
   - images/experimental-16mm/smith9thst.png
+anchors: design, photography
 ---
 Videos created during a course in ‘16mm Experimental Filmmaking’.
 

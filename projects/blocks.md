@@ -7,6 +7,7 @@ images:
   - images/blocks/blocks.png
   - images/blocks/blocks2.png
   - images/blocks/stormking.png
+anchors: design, photography
 ---
 Blocks was a series developed during my thesis. Drawing upon my previous Windows work, I set out to capture an entire city block. What followed was three distinct explorations.
 

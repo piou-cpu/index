@@ -6,6 +6,7 @@ categories: brand,print
 images:
   - images/business-card/flat.png
   - images/business-card/mock.jpeg
+anchors: design, direction
 ---
 Business card design with incorporated note taking structure. By including a form of calendar to the back of the design, cards can be handed out with more personalization as well as the ability to supply notes. The card becomes a living object, allowing the recipient to quickly remember the way in which they came into possession of said card. 
 

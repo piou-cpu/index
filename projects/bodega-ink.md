@@ -5,6 +5,7 @@ client: Bodega Ink
 categories: social
 images:
   - images/bodega-ink/social.jpg
+anchors: design, direction
 ---
 Social assets developed for East Village print shop, Bodega Ink.
 

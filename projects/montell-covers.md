@@ -6,6 +6,7 @@ categories: artist
 images:
   - images/montell-covers/thumbnails.jpg
   - images/montell-covers/color.jpg
+anchors: design, photography, direction
 ---
 A series of covers for Montell Fish. Image curation, resizes and color correction.
 

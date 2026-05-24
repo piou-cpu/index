@@ -9,6 +9,7 @@ images:
   - images/furniture-book/spread2.png
   - images/furniture-book/spread3.jpg
   - images/furniture-book/spread4.png
+anchors: design
 ---
 
 Scraped Flickr using the platform's image API for media tagged with the single keyword "furniture"; collecting not just the photographs but the rich metadata attached to them: usernames, timestamps, camera models, geolocation strings, and descriptions written in a dozen languages.

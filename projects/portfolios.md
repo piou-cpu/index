@@ -5,6 +5,7 @@ client: Personal
 categories: web,experiment,brand,code
 images:
 cover:
+anchors: design, direction
 ---
 
 ~~I've always remembered having a personal website. I remember, albeit vaguely, my brother leading me through the creation of my first site. The domain set-up, the tweaking of templates; the opening of a playground I'd explore for a long time to come.~~ Many of my portfolios and websites have come and gone, but my desire for experimentation and innovation has remained.

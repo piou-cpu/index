@@ -5,6 +5,7 @@ client: AU Studio
 categories: production,event
 images:
   - images/aus-weddings/wedding.gif
+anchors: direction
 ---
 Production for a series of weddings with AU Studio.
 

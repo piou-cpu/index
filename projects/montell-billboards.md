@@ -7,6 +7,7 @@ images:
   - images/montell-billboards/image1.jpeg
   - images/montell-billboards/image2.jpeg
   - images/montell-billboards/mock.jpg
+anchors: design, direction
 ---
 Developed as part of Montell Fish’s marketing rollout for his sophomore album, Charlotte. Displayed around the world in a number of significant cities.
 

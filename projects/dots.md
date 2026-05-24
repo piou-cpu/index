@@ -7,6 +7,7 @@ images:
   - images/dots/dots1.jpg
   - images/dots/dots2.jpg
   - images/dots/dots3.jpg
+anchors: design, direction
 ---
 Promotion material for legendary, high-stakes street BMX jam, Don of the Streets (DOTS). Promoted underground event with a social rollout consisting of roughly 10 digital assets. An estimated 1,000 international riders mobilized to swarm NYC and take over the streets.
 

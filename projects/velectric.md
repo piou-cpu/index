@@ -6,6 +6,7 @@ categories: flyer,artist,photography,event
 images:
   - images/velectric/poster.jpg
   - images/velectric/poster2.jpg
+anchors: design, direction
 ---
 
 A series of flyers for _Velectric_, a New York based DJ duo.

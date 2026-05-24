@@ -7,6 +7,7 @@ images:
   - images/busstop-processing/image1.png
   - images/busstop-processing/image2.png
   - images/busstop-processing/image3.png
+anchors: design, photography
 ---
 An exploration into the code based design program, Processing. I developed language to modify an image from my photographic archive (Extractions series), in both halftone and layer separation/distribution.
 

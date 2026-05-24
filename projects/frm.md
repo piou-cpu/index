@@ -5,6 +5,7 @@ client: Personal
 categories: artist,experiment,brand,curation,photography,thesis
 images:
   - images/frm/FRMcard.gif
+anchors: design, direction
 ---
 F_RM was developed as a direct result of my thesis. Beginning as a photographic research experiment, I drew inspiration from the window shape to inform a brand identity and institution proposal. 
 

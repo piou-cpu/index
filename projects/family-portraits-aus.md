@@ -6,6 +6,7 @@ categories: brand,production,event
 images:
   - images/family-portraits-aus/flyer.jpg
   - images/family-portraits-aus/header.png
+anchors: design, photography, direction
 ---
 Community give-back program; offering free family portraits and prints to our audience. Event production and flyer development.
 

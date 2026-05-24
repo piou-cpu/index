@@ -5,6 +5,7 @@ client: Ori Carino
 categories: artist,flyer,photography,event
 images:
   - images/ori-springbreak/flyer.jpg
+anchors: design, photography, direction
 ---
 A flyer for Ori Carino’s sculpture exhibition in Spring/Break’s first sculpture show in Poughkeepsie, NY. Combination of photography and design.
 

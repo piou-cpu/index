@@ -5,6 +5,7 @@ client: AU Studio
 categories: brand,video,production
 images:
   - images/flashfood-aus/flashfood.gif
+anchors: design, direction
 ---
 AU Studio was commissioned by Flashfood to develop and shoot a series of interviews with renowned chefs from leading NYC restaurants. A three-part series, we interviewed head chefs from HAGS (East Village), Theodora (Fort Greene) and Chez Ma Tante (Greenpoint). Credited as Producer.
 

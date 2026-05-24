@@ -5,6 +5,7 @@ client: Ori Carino
 categories: artist,curation
 images:
   - images/ori-social/ori-social1.jpg
+anchors: design, direction
 ---
 Social media curation and management for fine artist, Ori Carino.
 

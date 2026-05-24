@@ -9,6 +9,7 @@ images:
   - images/wikibook/spread2.jpg
   - images/wikibook/spread3.jpg
   - images/wikibook/spread4.jpg
+anchors: design, photography
 ---
 
 "Thirty Five mm Film and Minolta’s SRT-101 in the Lower East Side” is an editorial publication designed by combining a series of Wikipedia articles with my photography. The result was a story, or description, of: film photography, my camera, and Manhattan’s Lower East Side. 

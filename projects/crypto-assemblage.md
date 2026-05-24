@@ -9,6 +9,7 @@ images:
   - images/crypto-assemblage/site.jpg
   - images/crypto-assemblage-book/covers.jpg
   - images/crypto-assemblage/site2.jpg
+anchors: design, direction
 ---
 Crypto Assemblage is a multi-media art project devised by Ori Carino. A series of NFTs navigating a new landscape, the work presented opportunities for innovation across both the art itself and its subsequent marketing.
 

@@ -9,6 +9,7 @@ images:
   - images/ghent/close2.png
   - images/ghent/close3.png
   - images/ghent/close4.png
+anchors: design, photography
 ---
 
 A flyer developed from my personal archive of imagery.

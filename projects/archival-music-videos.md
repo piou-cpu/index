@@ -7,6 +7,7 @@ images:
   - images/archival-music-videos/water.png
   - images/archival-music-videos/dontwasteitbro.png
   - images/archival-music-videos/jeremyhillaryphd.png
+anchors: design, direction
 ---
 A series of music videos developed for musician Ian Ross Cohen. Leveraging archival footage scraped from Prelinger Archive.
 

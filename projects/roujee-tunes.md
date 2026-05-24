@@ -5,6 +5,7 @@ client: Roujee Tunes
 categories: flyer,artist,photography,event
 images:
   - images/roujee-tunes/poster.jpg
+anchors: design, direction
 ---
 
 Flyer design for Miami based DJ Group, _Roujeee Tunes_ for a one night event in NYC

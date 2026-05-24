@@ -5,6 +5,7 @@ client: Personal
 categories: brand
 images:
   - images/mouse/mouse1.png
+anchors: design, direction
 ---
 
 Preliminary Type Study

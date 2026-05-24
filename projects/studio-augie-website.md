@@ -7,6 +7,7 @@ images:
   - images/studio-augie-website/screen1.jpg
   - images/studio-augie-website/screen2.jpg
   - images/studio-augie-website/screen3.jpg
+anchors: design, direction
 ---
 
 I met Austin Augie in January 2024; he was living with the Amish at the time, in a small town in Indiana. He was looking to build a studio of his own, and a website to go with it. Very quickly, what started as a website grew into the building of a brand. Through a series of conversations and in-depth discussions, the studio began to take shape. Still called Studio Augie at the time, it would target three specific pillars — fashion, weddings, and events — and leverage Augie’s archive of projects and images. Over the course of a few months, I dug through hard drives identifying selects and organizing.

@@ -601,19 +601,6 @@ const INFO_PROJECT = {
   body: `Louis Falisse. Designer, photographer, and creative director based in New York.\n\nCo-founder of AU Studios.\n\n[louisfalisse@gmail.com](mailto:louisfalisse@gmail.com)`
 };
 
-// ── ANCHOR DEFINITIONS ──
-const ANCHOR_NODES = [
-  { id: '__anchor__design',      label: 'Design',      type: 'anchor' },
-  { id: '__anchor__photography', label: 'Photography', type: 'anchor' },
-  { id: '__anchor__direction',   label: 'Direction',   type: 'anchor' },
-];
-
-const ANCHOR_MAP = {
-  'design':      '__anchor__design',
-  'photography': '__anchor__photography',
-  'direction':   '__anchor__direction',
-};
-
 // ── STATE ──
 let allProjects = [];
 let currentSort = { field: 'date', dir: 'desc' };
@@ -644,21 +631,17 @@ function buildGraph(projects) {
   const W = window.innerWidth;
   const H = window.innerHeight - 40;
 
-  const svg = d3.select(svgEl)
-    .attr('width', W)
-    .attr('height', H);
-
-  // zoom container
+  const svg = d3.select(svgEl).attr('width', W).attr('height', H);
   const g = svg.append('g');
 
   const zoom = d3.zoom()
-    .scaleExtent([0.15, 4])
+    .scaleExtent([0.1, 6])
     .on('zoom', e => g.attr('transform', e.transform));
 
   svg.call(zoom);
 
-  // start slightly zoomed out so full graph is visible
-  svg.call(zoom.transform, d3.zoomIdentity.translate(W * 0.05, H * 0.05).scale(0.85));
+  // start zoomed in to center — user pans to explore
+  svg.call(zoom.transform, d3.zoomIdentity.translate(W / 2, H / 2).scale(1.8).translate(-W / 2, -H / 2));
 
   window.addEventListener('resize', () => {
     const nW = window.innerWidth;
@@ -668,13 +651,14 @@ function buildGraph(projects) {
     sim.alpha(0.3).restart();
   });
 
-  // center node
-  const centerNode = { id: '__center__', label: 'Louis Falisse', type: 'center', fx: W / 2, fy: H / 2 };
+  // collect all unique tags
+  const allTags = [...new Set(projects.flatMap(p => p.categories))];
+  const allAnchors = ['design', 'photography', 'direction'];
 
-  // build nodes array
+  // nodes: anchors + tags + projects
   const nodes = [
-    centerNode,
-    ...ANCHOR_NODES,
+    ...allAnchors.map(a => ({ id: `anchor:${a}`, label: a, type: 'anchor' })),
+    ...allTags.map(t => ({ id: `tag:${t}`, label: t, type: 'tag' })),
     ...projects.map(p => ({
       id: p.id,
       label: p.title,
@@ -684,126 +668,92 @@ function buildGraph(projects) {
     }))
   ];
 
-  // build links
+  // links
   const links = [];
 
-  // center → anchors
-  ANCHOR_NODES.forEach(a => {
-    links.push({ source: '__center__', target: a.id, type: 'spine' });
-  });
-
-  // projects → anchors via anchors field
   projects.forEach(p => {
-    if (!p.anchors || p.anchors.length === 0) {
-      // fallback: connect to design if no anchors
-      links.push({ source: p.id, target: '__anchor__design', type: 'project' });
-    } else {
-      p.anchors.forEach(a => {
-        const anchorId = ANCHOR_MAP[a.toLowerCase()];
-        if (anchorId) links.push({ source: p.id, target: anchorId, type: 'project' });
-      });
-    }
+    // project → anchor
+    (p.anchors || []).forEach(a => {
+      if (allAnchors.includes(a.toLowerCase())) {
+        links.push({ source: p.id, target: `anchor:${a.toLowerCase()}` });
+      }
+    });
+    // project → tag
+    (p.categories || []).forEach(t => {
+      links.push({ source: p.id, target: `tag:${t}` });
+    });
   });
 
-  // simulation
+  // simulation — equal repulsion so nodes distribute in a circle like Obsidian
   const sim = d3.forceSimulation(nodes)
     .force('link', d3.forceLink(links)
       .id(d => d.id)
-      .distance(d => d.type === 'spine' ? 200 : 110)
-      .strength(d => d.type === 'spine' ? 0.8 : 0.3))
-    .force('charge', d3.forceManyBody().strength(d => {
-      if (d.type === 'center') return -800;
-      if (d.type === 'anchor') return -500;
-      return -200;
-    }))
+      .distance(d => {
+        if (d.source.type === 'anchor' || d.target.type === 'anchor') return 130;
+        return 90;
+      })
+      .strength(0.3))
+    .force('charge', d3.forceManyBody().strength(-280))
     .force('center', d3.forceCenter(W / 2, H / 2))
-    .force('collision', d3.forceCollide(d => {
-      if (d.type === 'center') return 20;
-      if (d.type === 'anchor') return 14;
-      if (d.cover) return 32;
-      return 8;
-    }));
+    .force('collision', d3.forceCollide(d => d.cover ? 30 : 10));
 
   // links
   const linkSel = g.append('g')
-    .selectAll('line')
-    .data(links)
-    .join('line')
-    .attr('class', 'link')
-    .attr('stroke-width', d => d.type === 'spine' ? 1 : 0.5)
-    .attr('stroke', d => d.type === 'spine' ? '#cccccc' : '#dddddd');
+    .selectAll('line').data(links).join('line')
+    .attr('stroke', '#DDDDDD')
+    .attr('stroke-width', 0.5);
 
   // nodes
   const nodeSel = g.append('g')
-    .selectAll('g')
-    .data(nodes)
-    .join('g')
+    .selectAll('g').data(nodes).join('g')
     .attr('class', d => `node-group node-${d.type}`)
     .call(d3.drag()
       .on('start', dragStart)
       .on('drag', dragged)
       .on('end', dragEnd));
 
-  // render each node
   nodeSel.each(function(d) {
     const el = d3.select(this);
 
-    if (d.type === 'center') {
-      el.append('circle').attr('r', 4).attr('fill', '#1A1A1A');
+    if (d.type === 'anchor') {
+      el.append('circle').attr('r', 5).attr('fill', 'none').attr('stroke', '#888888').attr('stroke-width', 1);
       el.append('text')
-        .attr('dy', -9)
-        .attr('text-anchor', 'middle')
-        .attr('font-family', 'Courier New')
-        .attr('font-size', 11)
-        .attr('fill', '#1A1A1A')
-        .attr('letter-spacing', '0.04em')
-        .text(d.label);
-    } else if (d.type === 'anchor') {
-      el.append('circle').attr('r', 6).attr('fill', 'none').attr('stroke', '#777777').attr('stroke-width', 1);
-      el.append('text')
-        .attr('dy', -11)
-        .attr('text-anchor', 'middle')
-        .attr('font-family', 'Courier New')
-        .attr('font-size', 10)
-        .attr('fill', '#555555')
-        .attr('letter-spacing', '0.06em')
+        .attr('dy', -10).attr('text-anchor', 'middle')
+        .attr('font-family', 'Courier New').attr('font-size', 10)
+        .attr('fill', '#555555').attr('letter-spacing', '0.08em')
         .text(d.label.toUpperCase());
-      el.append('circle').attr('class', 'node-hit').attr('r', 16).attr('fill', 'transparent').attr('stroke', 'none');
+      el.append('circle').attr('r', 14).attr('fill', 'transparent').attr('stroke', 'none');
+    } else if (d.type === 'tag') {
+      el.append('circle').attr('r', 4).attr('fill', 'none').attr('stroke', '#BBBBBB').attr('stroke-width', 0.75);
+      el.append('text')
+        .attr('dy', -8).attr('text-anchor', 'middle')
+        .attr('font-family', 'Courier New').attr('font-size', 9)
+        .attr('fill', '#AAAAAA')
+        .text(d.label);
+      el.append('circle').attr('r', 12).attr('fill', 'transparent').attr('stroke', 'none');
     } else if (d.cover) {
       const size = 44;
       el.append('image')
         .attr('href', d.cover)
-        .attr('x', -size / 2)
-        .attr('y', -size / 2)
-        .attr('width', size)
-        .attr('height', size)
+        .attr('x', -size / 2).attr('y', -size / 2)
+        .attr('width', size).attr('height', size)
         .attr('preserveAspectRatio', 'xMidYMid meet')
         .style('pointer-events', 'none');
       el.append('text')
-        .attr('dy', size / 2 + 11)
-        .attr('text-anchor', 'middle')
-        .attr('font-family', 'Courier New')
-        .attr('font-size', 9)
-        .attr('fill', '#AAAAAA')
-        .text(d.label);
+        .attr('dy', size / 2 + 11).attr('text-anchor', 'middle')
+        .attr('font-family', 'Courier New').attr('font-size', 9)
+        .attr('fill', '#AAAAAA').text(d.label);
       el.append('rect')
-        .attr('class', 'node-hit')
-        .attr('x', -size / 2)
-        .attr('y', -size / 2)
-        .attr('width', size)
-        .attr('height', size)
-        .attr('fill', 'transparent')
-        .attr('stroke', 'none');
+        .attr('x', -size / 2).attr('y', -size / 2)
+        .attr('width', size).attr('height', size)
+        .attr('fill', 'transparent').attr('stroke', 'none');
     } else {
-      el.append('circle').attr('r', 3.5).attr('fill', '#AAAAAA');
+      el.append('circle').attr('r', 3).attr('fill', '#BBBBBB');
       el.append('text')
-        .attr('dy', -7)
-        .attr('text-anchor', 'middle')
-        .attr('font-family', 'Courier New')
-        .attr('font-size', 9)
-        .attr('fill', '#AAAAAA')
-        .text(d.label);
-      el.append('circle').attr('class', 'node-hit').attr('r', 10).attr('fill', 'transparent').attr('stroke', 'none');
+        .attr('dy', -7).attr('text-anchor', 'middle')
+        .attr('font-family', 'Courier New').attr('font-size', 9)
+        .attr('fill', '#AAAAAA').text(d.label);
+      el.append('circle').attr('r', 10).attr('fill', 'transparent').attr('stroke', 'none');
     }
   });
 
@@ -811,7 +761,6 @@ function buildGraph(projects) {
   const tooltip = document.getElementById('tooltip');
   nodeSel
     .on('mousemove', (e, d) => {
-      if (d.type === 'center') return;
       tooltip.style.opacity = '1';
       tooltip.style.left = (e.clientX + 14) + 'px';
       tooltip.style.top = (e.clientY - 4) + 'px';
@@ -821,76 +770,68 @@ function buildGraph(projects) {
 
   // click
   let didDrag = false;
-  let activeAnchor = null;
+  let activeNode = null;
 
   nodeSel.on('click', (e, d) => {
     if (didDrag) return;
     e.stopPropagation();
     tooltip.style.opacity = '0';
 
-    if (d.type === 'center') return;
-
-    if (d.type === 'anchor') {
-      if (activeAnchor === d.id) {
-        activeAnchor = null;
-        nodeSel.classed('faded', false);
-        linkSel.classed('faded', false);
-        return;
-      }
-      activeAnchor = d.id;
-      const connected = new Set([d.id, '__center__']);
-      links.forEach(l => {
-        const s = typeof l.source === 'object' ? l.source.id : l.source;
-        const t = typeof l.target === 'object' ? l.target.id : l.target;
-        if (s === d.id || t === d.id) {
-          connected.add(s);
-          connected.add(t);
-        }
-      });
-      nodeSel.classed('faded', n => !connected.has(n.id));
-      linkSel.classed('faded', l => {
-        const s = typeof l.source === 'object' ? l.source.id : l.source;
-        const t = typeof l.target === 'object' ? l.target.id : l.target;
-        return s !== d.id && t !== d.id;
-      });
+    if (d.type === 'project') {
+      openWindow(d.data);
       return;
     }
 
-    if (d.type === 'project') {
-      openWindow(d.data);
+    // tag or anchor click — fade unconnected
+    if (activeNode === d.id) {
+      activeNode = null;
+      nodeSel.classed('faded', false);
+      linkSel.classed('faded', false);
+      return;
     }
+
+    activeNode = d.id;
+    const connected = new Set([d.id]);
+    links.forEach(l => {
+      const s = typeof l.source === 'object' ? l.source.id : l.source;
+      const t = typeof l.target === 'object' ? l.target.id : l.target;
+      if (s === d.id) connected.add(t);
+      if (t === d.id) connected.add(s);
+    });
+
+    nodeSel.classed('faded', n => !connected.has(n.id));
+    linkSel.classed('faded', l => {
+      const s = typeof l.source === 'object' ? l.source.id : l.source;
+      const t = typeof l.target === 'object' ? l.target.id : l.target;
+      return s !== d.id && t !== d.id;
+    });
   });
 
   svg.on('click', () => {
-    activeAnchor = null;
+    activeNode = null;
     nodeSel.classed('faded', false);
     linkSel.classed('faded', false);
   });
 
-  // tick
   sim.on('tick', () => {
     linkSel
-      .attr('x1', d => d.source.x)
-      .attr('y1', d => d.source.y)
-      .attr('x2', d => d.target.x)
-      .attr('y2', d => d.target.y);
+      .attr('x1', d => d.source.x).attr('y1', d => d.source.y)
+      .attr('x2', d => d.target.x).attr('y2', d => d.target.y);
     nodeSel.attr('transform', d => `translate(${d.x},${d.y})`);
   });
 
   function dragStart(e, d) {
     didDrag = false;
     if (!e.active) sim.alphaTarget(0.3).restart();
-    d.fx = d.x;
-    d.fy = d.y;
+    d.fx = d.x; d.fy = d.y;
   }
   function dragged(e, d) {
     didDrag = true;
-    d.fx = e.x;
-    d.fy = e.y;
+    d.fx = e.x; d.fy = e.y;
   }
   function dragEnd(e, d) {
     if (!e.active) sim.alphaTarget(0);
-    if (d.type !== 'center') { d.fx = null; d.fy = null; }
+    d.fx = null; d.fy = null;
   }
 }
 
